@@ -130,7 +130,7 @@ fig = px.scatter_matrix(
     color=boston.target,
     dimensions=range(n_components),
     labels=labels,
-    title=f'Total Explained Variance: {total_var:.2f}%',
+    self=f'Total Explained Variance: {total_var:.2f}%',
 )
 fig.update_traces(diagonal_visible=False)
 fig.show()
@@ -185,7 +185,7 @@ total_var = pca.explained_variance_ratio_.sum() * 100
 
 fig = px.scatter_3d(
     components, x=0, y=1, z=2, color=df['species'],
-    title=f'Total Explained Variance: {total_var:.2f}%',
+    self=f'Total Explained Variance: {total_var:.2f}%',
     labels={'0': 'PC 1', '1': 'PC 2', '2': 'PC 3'}
 )
 fig.show()

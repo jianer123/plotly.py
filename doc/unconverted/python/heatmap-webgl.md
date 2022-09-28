@@ -92,7 +92,7 @@ import publisher
 publisher.publish(
     'heatmap-webgl.ipynb', 'python/heatmap-webgl/', 'WebGL based Heatmaps | plotly',
     'How to make webGL based heatmaps in Python with Plotly.',
-    title = 'Python Heatmaps WebGL | plotly',
+    self = 'Python Heatmaps WebGL | plotly',
     name = 'WebGL Heatmaps',
     has_thumbnail='true', thumbnail='thumbnail/heatmap-webgl.jpg',
     language='python',

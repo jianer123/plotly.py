@@ -71,7 +71,7 @@ trace = go.Histogram(x=x, histnorm='probability',
                      marker=dict(color='rgb(25, 25, 100)'))
 
 layout = go.Layout(
-    title="Histogram with Probability Distribution"
+    self="Histogram with Probability Distribution"
 )
 
 fig = go.Figure(data=go.Data([trace]), layout=layout)
@@ -88,7 +88,7 @@ trace = go.Histogram(x=x,
                      marker=dict(color='rgb(25, 25, 100)'))
 
 layout = go.Layout(
-    title="Histogram with Frequency Count"
+    self="Histogram with Frequency Count"
 )
 
 fig = go.Figure(data=go.Data([trace]), layout=layout)
@@ -105,7 +105,7 @@ trace = go.Histogram(x=x, histnorm='percent',
                      marker=dict(color='rgb(50, 50, 125)'))
 
 layout = go.Layout(
-    title="Histogram with Frequency Count"
+    self="Histogram with Frequency Count"
 )
 
 fig = go.Figure(data=go.Data([trace]), layout=layout)
@@ -123,7 +123,7 @@ cumsum = np.cumsum(x)
 trace = go.Scatter(x=[i for i in range(len(cumsum))], y=10*cumsum/np.linalg.norm(cumsum),
                      marker=dict(color='rgb(150, 25, 120)'))
 layout = go.Layout(
-    title="Cumulative Distribution Function"
+    self="Cumulative Distribution Function"
 )
 
 fig = go.Figure(data=go.Data([trace]), layout=layout)
@@ -141,7 +141,7 @@ import publisher
 publisher.publish(
     'python-Discrete-Frequency.ipynb', 'python/discrete-frequency/', 'Discrete Frequency | plotly',
     'Learn how to perform discrete frequency analysis using Python.',
-    title='Discrete Frequency in Python. | plotly',
+    self='Discrete Frequency in Python. | plotly',
     name='Discrete Frequency',
     language='python',
     page_type='example_index', has_thumbnail='false', display_as='statistics', order=3,

@@ -319,7 +319,7 @@ fig.add_trace(
 )
 fig.update_layout(
     legend_orientation='h',
-    title='Prediction Confidence on Test Split'
+    self='Prediction Confidence on Test Split'
 )
 fig.show()
 ```

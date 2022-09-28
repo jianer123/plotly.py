@@ -53,7 +53,7 @@ z_data = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/a
 
 fig = go.Figure(data=go.Surface(z=z_data, showscale=False))
 fig.update_layout(
-    title='Mt Bruno Elevation',
+    self='Mt Bruno Elevation',
     width=400, height=400,
     margin=dict(t=40, r=0, l=20, b=20)
 )
@@ -66,7 +66,7 @@ camera = dict(
     eye=dict(x=1.25, y=1.25, z=1.25)
 )
 
-fig.update_layout(scene_camera=camera, title=name)
+fig.update_layout(scene_camera=camera, self=name)
 fig.show()
 ```
 
@@ -85,7 +85,7 @@ z_data = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/a
 
 fig = go.Figure(data=go.Surface(z=z_data, showscale=False))
 fig.update_layout(
-    title='Mt Bruno Elevation',
+    self='Mt Bruno Elevation',
     width=400, height=400,
     margin=dict(t=30, r=0, l=20, b=10)
 )
@@ -95,7 +95,7 @@ camera = dict(
     eye=dict(x=2, y=2, z=0.1)
 )
 
-fig.update_layout(scene_camera=camera, title=name)
+fig.update_layout(scene_camera=camera, self=name)
 fig.show()
 ```
 
@@ -112,7 +112,7 @@ z_data = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/a
 
 fig = go.Figure(data=go.Surface(z=z_data, showscale=False))
 fig.update_layout(
-    title='Mt Bruno Elevation',
+    self='Mt Bruno Elevation',
     width=400, height=400,
     margin=dict(t=30, r=0, l=20, b=10)
 )
@@ -123,7 +123,7 @@ camera = dict(
 )
 
 
-fig.update_layout(scene_camera=camera, title=name)
+fig.update_layout(scene_camera=camera, self=name)
 fig.show()
 ```
 
@@ -138,7 +138,7 @@ z_data = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/a
 
 fig = go.Figure(data=go.Surface(z=z_data, showscale=False))
 fig.update_layout(
-    title='Mt Bruno Elevation',
+    self='Mt Bruno Elevation',
     width=400, height=400,
     margin=dict(t=30, r=0, l=20, b=10)
 )
@@ -148,7 +148,7 @@ camera = dict(
     eye=dict(x=2.5, y=0., z=0.)
 )
 
-fig.update_layout(scene_camera=camera, title=name)
+fig.update_layout(scene_camera=camera, self=name)
 fig.show()
 ```
 
@@ -163,7 +163,7 @@ z_data = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/a
 
 fig = go.Figure(data=go.Surface(z=z_data, showscale=False))
 fig.update_layout(
-    title='Mt Bruno Elevation',
+    self='Mt Bruno Elevation',
     width=400, height=400,
     margin=dict(t=30, r=0, l=20, b=10)
 )
@@ -173,7 +173,7 @@ camera = dict(
     eye=dict(x=0., y=0., z=2.5)
 )
 
-fig.update_layout(scene_camera=camera, title=name)
+fig.update_layout(scene_camera=camera, self=name)
 fig.show()
 ```
 
@@ -189,7 +189,7 @@ z_data = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/a
 
 fig = go.Figure(data=go.Surface(z=z_data, showscale=False))
 fig.update_layout(
-    title='Mt Bruno Elevation',
+    self='Mt Bruno Elevation',
     width=400, height=400,
     margin=dict(t=30, r=0, l=20, b=10)
 )
@@ -199,7 +199,7 @@ camera = dict(
     eye=dict(x=0.1, y=0.1, z=1.5)
 )
 
-fig.update_layout(scene_camera=camera, title=name)
+fig.update_layout(scene_camera=camera, self=name)
 fig.show()
 ```
 
@@ -216,7 +216,7 @@ z_data = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/a
 
 fig = go.Figure(data=go.Surface(z=z_data, showscale=False))
 fig.update_layout(
-    title='Mt Bruno Elevation',
+    self='Mt Bruno Elevation',
     width=400, height=400,
     margin=dict(t=30, r=0, l=20, b=10)
 )
@@ -227,7 +227,7 @@ camera = dict(
     eye=dict(x=0., y=2.5, z=0.)
 )
 
-fig.update_layout(scene_camera=camera, title=name)
+fig.update_layout(scene_camera=camera, self=name)
 fig.show()
 ```
 
@@ -243,7 +243,7 @@ z_data = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/a
 
 fig = go.Figure(data=go.Surface(z=z_data, showscale=False))
 fig.update_layout(
-    title='Mt Bruno Elevation',
+    self='Mt Bruno Elevation',
     width=400, height=400,
     margin=dict(t=30, r=0, l=20, b=10)
 )
@@ -256,7 +256,7 @@ camera = dict(
     eye=dict(x=2, y=0, z=0)
 )
 
-fig.update_layout(scene_camera=camera, scene_dragmode='orbit', title=name)
+fig.update_layout(scene_camera=camera, scene_dragmode='orbit', self=name)
 fig.show()
 ```
 
@@ -273,7 +273,7 @@ z_data = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/a
 
 fig = go.Figure(data=go.Surface(z=z_data, showscale=False))
 fig.update_layout(
-    title='Mt Bruno Elevation',
+    self='Mt Bruno Elevation',
     width=400, height=400,
     margin=dict(t=25, r=0, l=20, b=30)
 )
@@ -283,7 +283,7 @@ camera = dict(
     center=dict(x=0, y=0, z=0.7))
 
 
-fig.update_layout(scene_camera=camera, title=name)
+fig.update_layout(scene_camera=camera, self=name)
 fig.show()
 ```
 

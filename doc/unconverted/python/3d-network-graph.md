@@ -143,11 +143,11 @@ axis=dict(showbackground=False,
           zeroline=False,
           showgrid=False,
           showticklabels=False,
-          title=''
+          self=''
           )
 
 layout = go.Layout(
-         title="Network of coappearances of characters in Victor Hugo's novel<br> Les Miserables (3D visualization)",
+         self="Network of coappearances of characters in Victor Hugo's novel<br> Les Miserables (3D visualization)",
          width=1000,
          height=1000,
          showlegend=False,
@@ -199,7 +199,7 @@ import publisher
 publisher.publish(
     'Les-miserables-network.ipynb', 'python/3d-network-graph/', 'Python 3D Network Graphs',
     'How to make 3D Network Graphs in Python. ',
-    title = '3D Network Graphs in Python | plotly',
+    self = '3D Network Graphs in Python | plotly',
     name = '3D Network Graphs',
     has_thumbnail='true', thumbnail='thumbnail/3dnetwork.jpg',
     language='python', page_type='example_index',

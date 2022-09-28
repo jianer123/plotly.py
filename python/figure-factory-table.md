@@ -227,7 +227,7 @@ fig.update_layout(
     margin = {'t':50, 'b':100},
     xaxis = {'domain': [0, .5]},
     xaxis2 = {'domain': [0.6, 1.]},
-    yaxis2 = {'anchor': 'x2', 'title': 'Goals'}
+    yaxis2 = {'anchor': 'x2', 'self': 'Goals'}
 )
 
 fig.show()
@@ -269,7 +269,7 @@ fig.update_layout(
     margin = {'t':75, 'l':50},
     yaxis = {'domain': [0, .45]},
     xaxis2 = {'anchor': 'y2'},
-    yaxis2 = {'domain': [.6, 1], 'anchor': 'x2', 'title': 'Goals'}
+    yaxis2 = {'domain': [.6, 1], 'anchor': 'x2', 'self': 'Goals'}
 )
 
 fig.show()

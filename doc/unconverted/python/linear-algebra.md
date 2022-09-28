@@ -199,7 +199,7 @@ import publisher
 publisher.publish(
     'python_Linear_Algebra.ipynb', 'python/linear-algebra/', 'Linear Algebra | plotly',
     'Learn how to perform several operations on matrices including inverse, eigenvalues, and determinents',
-    title='Linear Algebra in Python. | plotly',
+    self='Linear Algebra in Python. | plotly',
     name='Linear Algebra',
     language='python',
     page_type='example_index', has_thumbnail='false', display_as='mathematics', order=10,

@@ -83,9 +83,9 @@ trace1 = go.Scatter(
     mode='markers'
 )
 layout = go.Layout(
-    title='Life expectancy vs GNP from MySQL world database',
-    xaxis=dict( type='log', title='GNP' ),
-    yaxis=dict( title='Life expectancy' )
+    self='Life expectancy vs GNP from MySQL world database',
+    xaxis=dict( type='log', self='GNP' ),
+    yaxis=dict( self='Life expectancy' )
 )
 data = [trace1]
 fig = go.Figure(data=data, layout=layout)
@@ -151,7 +151,7 @@ for continent, X in df.groupby('Continent'):
     )
 
     # Set plot and axis titles
-title = "Life expectancy vs GNP from MySQL world database (bubble chart)"
+self = "Life expectancy vs GNP from MySQL world database (bubble chart)"
 x_title = "Gross National Product"
 y_title = "Life Expectancy [in years]"
 
@@ -167,17 +167,17 @@ axis_style = dict(
 
 # Make layout object
 layout = go.Layout(
-    title=title,             # set plot title
+    self=self,             # set plot self
     plot_bgcolor='#EFECEA',  # set plot color to grey
     hovermode="closest",
     xaxis=dict(
         axis_style,      # add axis style dictionary
-        title=x_title,   # x-axis title
+        self=x_title,   # x-axis self
         range=[2.0,7.2], # log of min and max x limits
     ),
     yaxis=dict(
         axis_style,      # add axis style dictionary
-        title=y_title,   # y-axis title
+        self=y_title,   # y-axis self
     )
 )
 
@@ -201,7 +201,7 @@ display(HTML('<link rel="stylesheet" type="text/css" href="http://help.plot.ly/d
 import publisher
 publisher.publish('mysql-ipython-notebook.ipynb', 'python/graph-data-from-mysql-database-in-python/',
                   'Plot Data from MySQL', 'How to graph data from a MySQL database with Python.',
-                  title='Plot Data from a MySQL Database | Plotly', has_thumbnail='false',
+                  self='Plot Data from a MySQL Database | Plotly', has_thumbnail='false',
                   page_type='example_index', display_as='databases', order=1, language='python',
                   uses_plotly_offline=True)
 ```

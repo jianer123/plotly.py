@@ -45,7 +45,7 @@ import plotly.express as px
 
 df = px.data.gapminder().query("continent=='Oceania'")
 
-fig = px.line(df, x="year", y="lifeExp", color="country", title="layout.hovermode='closest' (the default)")
+fig = px.line(df, x="year", y="lifeExp", color="country", self="layout.hovermode='closest' (the default)")
 fig.update_traces(mode="markers+lines")
 
 fig.show()
@@ -60,7 +60,7 @@ import plotly.express as px
 
 df = px.data.gapminder().query("continent=='Oceania'")
 
-fig = px.line(df, x="year", y="lifeExp", color="country", title="layout.hovermode='x'")
+fig = px.line(df, x="year", y="lifeExp", color="country", self="layout.hovermode='x'")
 fig.update_traces(mode="markers+lines", hovertemplate=None)
 fig.update_layout(hovermode="x")
 
@@ -76,7 +76,7 @@ import plotly.express as px
 
 df = px.data.gapminder().query("continent=='Oceania'")
 
-fig = px.line(df, x="year", y="lifeExp", color="country", title="layout.hovermode='x unified'")
+fig = px.line(df, x="year", y="lifeExp", color="country", self="layout.hovermode='x unified'")
 fig.update_traces(mode="markers+lines", hovertemplate=None)
 fig.update_layout(hovermode="x unified")
 
@@ -121,7 +121,7 @@ import plotly.express as px
 
 df = px.data.gapminder().query("continent=='Oceania'")
 
-fig = px.line(df, x="year", y="lifeExp", color="country", title="Custom layout.hoverlabel formatting")
+fig = px.line(df, x="year", y="lifeExp", color="country", self="Custom layout.hoverlabel formatting")
 fig.update_traces(mode="markers+lines")
 
 fig.update_layout(
@@ -137,7 +137,7 @@ fig.show()
 
 ### Customizing Hover text with Plotly Express
 
-Plotly Express functions automatically add all the data being plotted (x, y, color etc) to the hover label. Many Plotly Express functions also support configurable hover text. The `hover_data` argument accepts a list of column names to be added to the hover tooltip, or a dictionary for advanced formatting (see the next section). The `hover_name` property controls which column is displayed in bold as the tooltip title.
+Plotly Express functions automatically add all the data being plotted (x, y, color etc) to the hover label. Many Plotly Express functions also support configurable hover text. The `hover_data` argument accepts a list of column names to be added to the hover tooltip, or a dictionary for advanced formatting (see the next section). The `hover_name` property controls which column is displayed in bold as the tooltip self.
 
 Here is an example that creates a scatter plot using Plotly Express with custom hover data and a custom hover name.
 
@@ -211,7 +211,7 @@ fig.add_trace(go.Scatter(
 
 fig.update_layout(
     hoverlabel_align = 'right',
-    title = "Set hover text with hovertemplate")
+    self = "Set hover text with hovertemplate")
 
 fig.show()
 ```
@@ -330,9 +330,9 @@ fig.update_traces(
 
 fig.update_layout(
     xaxis={
-        'title':'GDP per capita',
+        'self':'GDP per capita',
         'type':'log'},
-    yaxis={'title':'Life Expectancy (years)'})
+    yaxis={'self':'Life Expectancy (years)'})
 
 fig.show()
 ```
@@ -424,7 +424,7 @@ import plotly.express as px
 
 df = px.data.gapminder().query("continent=='Oceania'")
 
-fig = px.line(df, x="year", y="lifeExp", color="country", title="Spike lines active")
+fig = px.line(df, x="year", y="lifeExp", color="country", self="Spike lines active")
 fig.update_traces(mode="markers+lines")
 
 fig.update_xaxes(showspikes=True)
@@ -440,7 +440,7 @@ import plotly.express as px
 
 df = px.data.gapminder().query("continent=='Oceania'")
 
-fig = px.line(df, x="year", y="lifeExp", color="country", title="Styled Spike Lines")
+fig = px.line(df, x="year", y="lifeExp", color="country", self="Styled Spike Lines")
 fig.update_traces(mode="markers+lines")
 
 fig.update_xaxes(showspikes=True, spikecolor="green", spikesnap="cursor", spikemode="across")

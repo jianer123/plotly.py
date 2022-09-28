@@ -175,7 +175,7 @@ fig.add_trace(go.Scattergeo(
     ))
 
 fig.update_layout(
-    title = go.layout.Title(
+    self = go.layout.Title(
         text = 'Ebola cases reported by month in West Africa 2014<br> \
 Source: <a href="https://data.hdx.rwlabs.org/dataset/rowca-ebola-cases">\
 HDX</a>'),

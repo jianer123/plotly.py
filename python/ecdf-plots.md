@@ -97,7 +97,7 @@ In `standard` mode (the default), the right-most point is at 1 (or the total cou
 ```python
 import plotly.express as px
 fig = px.ecdf(df, x=[1,2,3,4], markers=True, ecdfmode="standard",
-              title="ecdfmode='standard' (Y=fraction at or below X value, this the default)")
+              self="ecdfmode='standard' (Y=fraction at or below X value, this the default)")
 fig.show()
 ```
 
@@ -106,7 +106,7 @@ In `reversed` mode, the right-most point is at 1 (or the total count/sum, depend
 ```python
 import plotly.express as px
 fig = px.ecdf(df, x=[1,2,3,4], markers=True, ecdfmode="reversed",
-              title="ecdfmode='reversed' (Y=fraction at or above X value)")
+              self="ecdfmode='reversed' (Y=fraction at or above X value)")
 fig.show()
 ```
 
@@ -115,7 +115,7 @@ In `complementary` mode, the right-most point is at 0 and no points are at 1 (or
 ```python
 import plotly.express as px
 fig = px.ecdf(df, x=[1,2,3,4], markers=True, ecdfmode="complementary",
-              title="ecdfmode='complementary' (Y=fraction above X value)")
+              self="ecdfmode='complementary' (Y=fraction above X value)")
 fig.show()
 ```
 

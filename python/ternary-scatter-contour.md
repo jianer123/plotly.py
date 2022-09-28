@@ -95,13 +95,13 @@ fig = go.Figure(go.Scatterternary(
 ))
 
 fig.update_layout({
-    'title': 'Ternary Scatter Plot',
+    'self': 'Ternary Scatter Plot',
     'ternary':
         {
         'sum':1,
-        'aaxis':{'title': 'X', 'min': 0.01, 'linewidth':2, 'ticks':'outside' },
-        'baxis':{'title': 'W', 'min': 0.01, 'linewidth':2, 'ticks':'outside' },
-        'caxis':{'title': 'S', 'min': 0.01, 'linewidth':2, 'ticks':'outside' }
+        'aaxis':{'self': 'X', 'min': 0.01, 'linewidth':2, 'ticks':'outside' },
+        'baxis':{'self': 'W', 'min': 0.01, 'linewidth':2, 'ticks':'outside' },
+        'caxis':{'self': 'S', 'min': 0.01, 'linewidth':2, 'ticks':'outside' }
     },
     'showlegend': False
 })
@@ -146,7 +146,7 @@ for raw_data in contour_dict:
         fillcolor = colors_iterator.__next__()
     ))
 
-fig.update_layout(title = 'Ternary Contour Plot')
+fig.update_layout(self = 'Ternary Contour Plot')
 fig.show()
 ```
 

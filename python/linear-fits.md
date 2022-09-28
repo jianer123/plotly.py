@@ -102,7 +102,7 @@ import plotly.express as px
 df = px.data.gapminder(year=2007)
 fig = px.scatter(df, x="gdpPercap", y="lifeExp", 
                  trendline="ols", trendline_options=dict(log_x=True),
-                 title="Log-transformed fit on linear axes")
+                 self="Log-transformed fit on linear axes")
 fig.show()
 ```
 
@@ -112,7 +112,7 @@ import plotly.express as px
 df = px.data.gapminder(year=2007)
 fig = px.scatter(df, x="gdpPercap", y="lifeExp", log_x=True, 
                  trendline="ols", trendline_options=dict(log_x=True),
-                 title="Log-scaled X axis and log-transformed fit")
+                 self="Log-scaled X axis and log-transformed fit")
 fig.show()
 ```
 
@@ -151,7 +151,7 @@ import plotly.express as px
 
 df = px.data.stocks(datetimes=True)
 fig = px.scatter(df, x="date", y="GOOG", trendline="rolling", trendline_options=dict(window=5),
-                title="5-point moving average")
+                self="5-point moving average")
 fig.show()
 ```
 
@@ -160,7 +160,7 @@ import plotly.express as px
 
 df = px.data.stocks(datetimes=True)
 fig = px.scatter(df, x="date", y="GOOG", trendline="ewm", trendline_options=dict(halflife=2),
-                title="Exponentially-weighted moving average (halflife of 2 points)")
+                self="Exponentially-weighted moving average (halflife of 2 points)")
 fig.show()
 ```
 
@@ -168,7 +168,7 @@ fig.show()
 import plotly.express as px
 
 df = px.data.stocks(datetimes=True)
-fig = px.scatter(df, x="date", y="GOOG", trendline="expanding", title="Expanding mean")
+fig = px.scatter(df, x="date", y="GOOG", trendline="expanding", self="Expanding mean")
 fig.show()
 ```
 
@@ -181,7 +181,7 @@ import plotly.express as px
 
 df = px.data.stocks(datetimes=True)
 fig = px.scatter(df, x="date", y="GOOG", trendline="rolling", trendline_options=dict(function="median", window=5),
-                title="Rolling Median")
+                self="Rolling Median")
 fig.show()
 ```
 
@@ -190,7 +190,7 @@ import plotly.express as px
 
 df = px.data.stocks(datetimes=True)
 fig = px.scatter(df, x="date", y="GOOG", trendline="expanding", trendline_options=dict(function="max"),
-                title="Expanding Maximum")
+                self="Expanding Maximum")
 fig.show()
 ```
 
@@ -202,7 +202,7 @@ import plotly.express as px
 df = px.data.stocks(datetimes=True)
 fig = px.scatter(df, x="date", y="GOOG", trendline="rolling", 
                  trendline_options=dict(window=5, win_type="gaussian", function_args=dict(std=2)),
-                title="Rolling Mean with Gaussian Window")
+                self="Rolling Mean with Gaussian Window")
 fig.show()
 ```
 
@@ -215,7 +215,7 @@ import plotly.express as px
 
 df = px.data.stocks(indexed=True, datetimes=True)
 fig = px.scatter(df, trendline="rolling", trendline_options=dict(window=5),
-                title="5-point moving average")
+                self="5-point moving average")
 fig.data = [t for t in fig.data if t.mode == "lines"]
 fig.update_traces(showlegend=True) #trendlines have showlegend=False by default
 fig.show()

@@ -147,7 +147,7 @@ fig = go.Figure(data=[go.Sankey(
 
 fig.update_layout(
     hovermode = 'x',
-    title="Energy forecast for 2050<br>Source: Department of Energy & Climate Change, Tom Counsell via <a href='https://bost.ocks.org/mike/sankey/'>Mike Bostock</a>",
+    self="Energy forecast for 2050<br>Source: Department of Energy & Climate Change, Tom Counsell via <a href='https://bost.ocks.org/mike/sankey/'>Mike Bostock</a>",
     font=dict(size = 10, color = 'white'),
     plot_bgcolor='black',
     paper_bgcolor='black'

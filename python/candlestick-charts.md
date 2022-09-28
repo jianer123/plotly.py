@@ -102,7 +102,7 @@ fig = go.Figure(data=[go.Candlestick(x=df['Date'],
                       ])
 
 fig.update_layout(
-    title='The Great Recession',
+    self='The Great Recession',
     yaxis_title='AAPL Stock',
     shapes = [dict(
         x0='2016-12-09', x1='2016-12-09', y0=0, y1=1, xref='x', yref='paper',

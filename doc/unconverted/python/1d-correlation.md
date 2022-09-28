@@ -156,7 +156,7 @@ import publisher
 publisher.publish(
     'python-1D-Correlation.ipynb', 'python/1d-correlation/', '1D Correlation | plotly',
     'Learn how to perform 1 dimensional correlation between two signals in Python.',
-    title='1D Correlation in Python | plotly',
+    self='1D Correlation in Python | plotly',
     name='1D Correlation',
     language='python',
     page_type='example_index', has_thumbnail='false', display_as='signal-analysis', order=5)

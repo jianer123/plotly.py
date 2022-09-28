@@ -141,11 +141,11 @@ fig.layout.xaxis2.update({'domain': [0.6, 1.]})
 
 # The graph's yaxis MUST BE anchored to the graph's xaxis
 fig.layout.yaxis2.update({'anchor': 'x2'})
-fig.layout.yaxis2.update({'title': 'Goals'})
+fig.layout.yaxis2.update({'self': 'Goals'})
 
-# Update the margins to add a title and see graph x-labels.
+# Update the margins to add a self and see graph x-labels.
 fig.layout.margin.update({'t':50, 'b':100})
-fig.layout.update({'title': '2016 Hockey Stats'})
+fig.layout.update({'self': '2016 Hockey Stats'})
 
 fig.show()
 ```
@@ -196,11 +196,11 @@ fig.layout.yaxis2.update({'domain': [.6, 1]})
 # The graph's yaxis2 MUST BE anchored to the graph's xaxis2 and vice versa
 fig.layout.yaxis2.update({'anchor': 'x2'})
 fig.layout.xaxis2.update({'anchor': 'y2'})
-fig.layout.yaxis2.update({'title': 'Goals'})
+fig.layout.yaxis2.update({'self': 'Goals'})
 
-# Update the margins to add a title and see graph x-labels.
+# Update the margins to add a self and see graph x-labels.
 fig.layout.margin.update({'t':75, 'l':50})
-fig.layout.update({'title': '2016 Hockey Stats'})
+fig.layout.update({'self': '2016 Hockey Stats'})
 
 # Update the height because adding a graph vertically will interact with
 # the plot height calculated for the table

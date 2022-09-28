@@ -161,7 +161,7 @@ fig.add_trace(go.Contourcarpet(
       yanchor = "bottom",
       titleside = "right",
       len = 0.75,
-      title = "Pressure coefficient, c<sub>p</sub>"
+      self = "Pressure coefficient, c<sub>p</sub>"
     ),
     contours = dict(
       start = -1,
@@ -270,7 +270,7 @@ fig.update_layout(
       range = [-3.800,3.800],
       showgrid = False
     ),
-    title = "Flow over a Karman-Trefftz airfoil",
+    self = "Flow over a Karman-Trefftz airfoil",
     hovermode = "closest",
     margin = dict(
       r = 60,

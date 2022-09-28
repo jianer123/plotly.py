@@ -55,7 +55,7 @@ clusters = dict(
     x = df['x'], y = df['y'], z = df['z']
 )
 layout = dict(
-    title = '3d point clustering',
+    self = '3d point clustering',
     scene = dict(
         xaxis = dict( zeroline=False ),
         yaxis = dict( zeroline=False ),
@@ -87,7 +87,7 @@ import publisher
 publisher.publish(
     '3d-clusters.ipynb', 'python/3d-point-clustering/', 'Python 3D Clustering | plotly',
     'How to cluster points in 3d with alpha shapes in plotly and Python',
-    title= '3D Point Clustering in Python | plotly',
+    self= '3D Point Clustering in Python | plotly',
     name = '3d Clustering',
     has_thumbnail='true', thumbnail='thumbnail/3d-clusters.jpg',
     language='python',

@@ -101,7 +101,7 @@ import publisher
 publisher.publish(
     'python-Baseline-Detection.ipynb', 'python/baseline-detection/', 'Baseline Detection | plotly',
     'Learn how to detect baselines on data in Python.',
-    title='Baseline Detection in Python | plotly',
+    self='Baseline Detection in Python | plotly',
     name='Baseline Detection',
     language='python',
     page_type='example_index', has_thumbnail='false', display_as='peak-analysis', order=1,

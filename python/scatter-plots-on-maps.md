@@ -107,7 +107,7 @@ fig = go.Figure(data=go.Scattergeo(
         ))
 
 fig.update_layout(
-        title = 'Most trafficked US airports<br>(Hover for airport names)',
+        self = 'Most trafficked US airports<br>(Hover for airport names)',
         geo_scope='usa',
     )
 fig.show()
@@ -148,7 +148,7 @@ fig = go.Figure(data=go.Scattergeo(
         )))
 
 fig.update_layout(
-        title = 'Most trafficked US airports<br>(Hover for airport names)',
+        self = 'Most trafficked US airports<br>(Hover for airport names)',
         geo = dict(
             scope='usa',
             projection_type='albers usa',
@@ -225,7 +225,7 @@ fig.update_layout(
             dtick = 5
         )
     ),
-    title='US Precipitation 06-30-2015<br>Source: <a href="http://water.weather.gov/precip/">NOAA</a>',
+    self='US Precipitation 06-30-2015<br>Source: <a href="http://water.weather.gov/precip/">NOAA</a>',
 )
 fig.show()
 ```

@@ -105,7 +105,7 @@ import publisher
 publisher.publish(
     'density-plots.ipynb', 'python/density-plots/', 'Python 2d Density Plots | plotly',
     'How to make a 2d density plot in python. Examples of density plots with kernel density estimations, custom color-scales, and smoothing.',
-    title='Python 2d Density Plots | plotly',
+    self='Python 2d Density Plots | plotly',
     name='2d Density Plots',
     thumbnail='thumbnail/density.gif', language='python',
     has_thumbnail='true', display_as='statistical', order=7,

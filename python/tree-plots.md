@@ -117,13 +117,13 @@ def make_annotations(pos, text, font_size=10, font_color='rgb(250,250,250)'):
 #### Add Axis Specifications and Create the Layout
 
 ```python
-axis = dict(showline=False, # hide axis line, grid, ticklabels and  title
+axis = dict(showline=False, # hide axis line, grid, ticklabels and  self
             zeroline=False,
             showgrid=False,
             showticklabels=False,
             )
 
-fig.update_layout(title= 'Tree with Reingold-Tilford Layout',
+fig.update_layout(self= 'Tree with Reingold-Tilford Layout',
               annotations=make_annotations(position, v_label),
               font_size=12,
               showlegend=False,

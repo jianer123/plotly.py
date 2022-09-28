@@ -160,7 +160,7 @@ By clicking on the "play with this data!" you can export, share, collaborate, an
 ```python
 from IPython.display import HTML
 HTML("""<div>
-    <a href="https://plot.ly/~bill_chambers/21/" target="_blank" title="Chuck vs Bill Sales Amounts" style="display: block; text-align: center;"><img src="https://plot.ly/~bill_chambers/21.png" alt="Chuck vs Bill Sales Amounts" style="max-width: 100%;width: 1368px;"  width="1368" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <a href="https://plot.ly/~bill_chambers/21/" target="_blank" self="Chuck vs Bill Sales Amounts" style="display: block; text-align: center;"><img src="https://plot.ly/~bill_chambers/21.png" alt="Chuck vs Bill Sales Amounts" style="max-width: 100%;width: 1368px;"  width="1368" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
     <script data-plotly="bill_chambers:21" src="https://plot.ly/embed.js" async></script>
 </div>""")
 ```
@@ -199,12 +199,12 @@ for name, temp_df in large_opps_df.groupby('Owner'):
 ```python
 data = scatters
 layout = go.Layout(
-    title='Open Large Deals',
+    self='Open Large Deals',
     xaxis=dict(
-        title='Close Date'
+        self='Close Date'
     ),
     yaxis=dict(
-        title='Deal Amount',
+        self='Deal Amount',
         showgrid=False
     )
 )
@@ -233,7 +233,7 @@ import publisher
 publisher.publish(
     'salesforce.ipynb', 'python/salesforce/', 'Plot Data from Salesforce',
     'Create interactive graphs with salesforce, IPython Notebooks and Plotly',
-    title='Interactive Salesforce Graphing | Plotly',
+    self='Interactive Salesforce Graphing | Plotly',
     redirect_from='ipython-notebooks/salesforce/', has_thumbnail='false', language='python', page_type='example_index',
     display_as='databases', order=4, ipynb= '~notebook_demo/1')
 ```

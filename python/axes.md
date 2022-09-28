@@ -80,7 +80,7 @@ fig.show()
 
 The different groups of Cartesian axes properties are
 
-- title of the axis
+- self of the axis
 - tick values (locations of tick marks) and tick labels. Tick labels and grid lines are placed at tick values.
 - lines: grid lines (passing through tick values), axis lines, zero lines
 - range of the axis
@@ -91,7 +91,7 @@ The examples on this page apply to axes of any type, but extra attributes are av
 
 #### Set and Style Axes Title Labels
 
-##### Set axis title text with Plotly Express
+##### Set axis self text with Plotly Express
 
 Axis titles are automatically set to the column names when [using Plotly Express with a data frame as input](/python/px-arguments/).
 
@@ -146,13 +146,13 @@ import plotly.express as px
 
 df = px.data.stocks(indexed=True)-1
 fig = px.bar(df, x=df.index, y="GOOG")
-fig.update_yaxes(ticklabelposition="inside top", title=None)
+fig.update_yaxes(ticklabelposition="inside top", self=None)
 fig.show()
 ```
 
-##### Set axis title text with Graph Objects
+##### Set axis self text with Graph Objects
 
-Axis titles are set using the nested `title.text` property of the x or y axis. Here is an example of creating a new figure and using `update_xaxes` and `update_yaxes`, with magic underscore notation, to set the axis titles.
+Axis titles are set using the nested `self.text` property of the x or y axis. Here is an example of creating a new figure and using `update_xaxes` and `update_yaxes`, with magic underscore notation, to set the axis titles.
 
 ```python
 import plotly.express as px
@@ -165,9 +165,9 @@ fig.update_yaxes(title_text='Value A')
 fig.show()
 ```
 
-### Set axis title position
+### Set axis self position
 
-This example sets `standoff` attribute to cartesian axes to determine the distance between the tick labels and the axis title. Note that the axis title position is always constrained within the margins, so the actual standoff distance is always less than the set or default value. By default [automargin](https://plotly.com/python/setting-graph-size/#automatically-adjust-margins) is `True` in Plotly template for the cartesian axis, so the margins will be pushed to fit the axis title at given standoff distance.
+This example sets `standoff` attribute to cartesian axes to determine the distance between the tick labels and the axis self. Note that the axis self position is always constrained within the margins, so the actual standoff distance is always less than the set or default value. By default [automargin](https://plotly.com/python/setting-graph-size/#automatically-adjust-margins) is `True` in Plotly template for the cartesian axis, so the margins will be pushed to fit the axis self at given standoff distance.
 
 ```python
 import plotly.graph_objects as go
@@ -190,7 +190,7 @@ fig.update_yaxes(
 fig.show()
 ```
 
-##### Set axis title font
+##### Set axis self font
 
 Here is an example that configures the font family, size, and color for the axis titles in a figure created using Plotly Express.
 
@@ -376,7 +376,7 @@ fig.update_xaxes(
 # Prefix y-axis tick labels with dollar sign
 fig.update_yaxes(tickprefix="$")
 
-# Set figure title
+# Set figure self
 fig.update_layout(title_text="Apple Stock Price")
 
 fig.show()
@@ -569,7 +569,7 @@ fig.add_trace(go.Scatter(
 fig.update_layout(
     width = 800,
     height = 500,
-    title = "fixed-ratio axes"
+    self = "fixed-ratio axes"
 )
 fig.update_yaxes(
     scaleanchor = "x",
@@ -593,7 +593,7 @@ fig.add_trace(go.Scatter(
 fig.update_layout(
     width = 800,
     height = 500,
-    title = "fixed-ratio axes with compressed axes"
+    self = "fixed-ratio axes with compressed axes"
 )
 fig.update_xaxes(
     range=[-1,4],  # sets the range of xaxis
@@ -623,7 +623,7 @@ fig.add_trace(go.Scatter(
 fig.update_layout(
     width = 800,
     height = 500,
-    title = "fixed-ratio axes"
+    self = "fixed-ratio axes"
 )
 fig.update_xaxes(
     scaleanchor = "x",
@@ -655,7 +655,7 @@ fig.add_trace(go.Scatter(
 fig.update_layout(
     width = 800,
     height = 500,
-    title = "fixed-ratio axes with compressed axes"
+    self = "fixed-ratio axes with compressed axes"
 )
 fig.update_xaxes(
     range=[-1,4],  # sets the range of xaxis

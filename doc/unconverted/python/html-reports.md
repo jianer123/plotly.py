@@ -175,13 +175,13 @@ for i in range(1,7):
 left_index = 1
 bottom_index = 1
 for tk in tickers:
-    fig['layout']['xaxis{}'.format(left_index)].update( title=tk )
-    fig['layout']['yaxis{}'.format(bottom_index)].update( title=tk )
+    fig['layout']['xaxis{}'.format(left_index)].update( self=tk )
+    fig['layout']['yaxis{}'.format(bottom_index)].update( self=tk )
     left_index=left_index+1
     bottom_index=bottom_index+6
 
 # Remove legend by updating 'layout' key
-fig['layout'].update(showlegend=False,height=1000,width=1000, title='Major technology and CPG stock prices in 2014')
+fig['layout'].update(showlegend=False,height=1000,width=1000, self='Major technology and CPG stock prices in 2014')
 fig['data'] = data
 py.iplot(fig, height=1000, width=1000, filename='Major technology and CPG stock prices in 2014 - scatter matrix')
 ```

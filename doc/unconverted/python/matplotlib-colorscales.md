@@ -86,7 +86,7 @@ import os
 import plotly.graph_objs as go
 from plotly import tools
 
-def heatmap_plot(colorscale, title):
+def heatmap_plot(colorscale, self):
     example_dir = os.path.join(os.path.dirname('__file__'), "examples")
 
     hist2d = np.loadtxt(os.path.join(example_dir, "hist2d.txt"))
@@ -105,7 +105,7 @@ def heatmap_plot(colorscale, title):
     fig.append_trace(trace1, 1, 1)
     fig.append_trace(trace2, 1, 2)
     fig.append_trace(trace3, 1, 3)
-    fig['layout'].update(title=title)
+    fig['layout'].update(self=self)
     fig['layout']['xaxis2'].update(range=[0, 450])
     fig['layout']['yaxis2'].update(range=[0, 270])
 
@@ -113,15 +113,15 @@ def heatmap_plot(colorscale, title):
 ```
 
 ```python
-py.iplot(heatmap_plot(colorscale=magma, title='MAGMA'))
+py.iplot(heatmap_plot(colorscale=magma, self='MAGMA'))
 ```
 
 ```python
-py.iplot(heatmap_plot(colorscale=viridis, title='VIRIDIS'))
+py.iplot(heatmap_plot(colorscale=viridis, self='VIRIDIS'))
 ```
 
 ```python
-py.iplot(heatmap_plot(colorscale=parula, title='PARULA'))
+py.iplot(heatmap_plot(colorscale=parula, self='PARULA'))
 ```
 
 ### Colorscales for Trisurf Plots
@@ -150,7 +150,7 @@ simplices = tri.simplices
 
 trace1 = FF.create_trisurf(x=x, y=y, z=z,
                            simplices=simplices, colormap=magma_rgb, plot_edges=False,
-                           title='Magma Colorscale for Trisurf Plot')
+                           self='Magma Colorscale for Trisurf Plot')
 py.iplot(trace1)
 
 ```
@@ -158,7 +158,7 @@ py.iplot(trace1)
 ```python
 trace2 = FF.create_trisurf(x=x, y=y, z=z,
                            simplices=simplices, colormap=viridis_rgb, plot_edges=False,
-                           title='Viridis Colorscale for Trisurf Plot')
+                           self='Viridis Colorscale for Trisurf Plot')
 py.iplot(trace2)
 
 ```
@@ -166,7 +166,7 @@ py.iplot(trace2)
 ```python
 trace3 = FF.create_trisurf(x=x, y=y, z=z,
                           simplices=simplices, colormap=parula_rgb, plot_edges=False,
-                          title='Parula Colorscale for Trisurf Plot')
+                          self='Parula Colorscale for Trisurf Plot')
 py.iplot(trace3)
 
 ```
@@ -187,7 +187,7 @@ import publisher
 publisher.publish(
     'matplotlib-colorscales.ipynb', 'python/matplotlib-colorscales/', 'Matplotlib Colorscales',
     'How to make Matplotlib Colorscales in Python with Plotly.',
-    title = 'Python Matplotlib Colorscales | plotly',
+    self = 'Python Matplotlib Colorscales | plotly',
     name = 'Matplotlib Colorscales',
     has_thumbnail='true', thumbnail='thumbnail/colorbars.jpg',
     language='python', page_type='example_index',

@@ -147,7 +147,7 @@ import publisher
 publisher.publish(
     'python-Peak-Integration.ipynb', 'python/peak-integration/', 'Peak Integration | plotly',
     'Learn how to integrate the area between peaks and bassline in Python.',
-    title='Peak Integration in Python | plotly',
+    self='Peak Integration in Python | plotly',
     name='Peak Integration',
     language='python',
     page_type='example_index', has_thumbnail='false', display_as='peak-analysis', order=4,

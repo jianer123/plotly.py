@@ -205,7 +205,7 @@ import publisher
 publisher.publish(
     'tesla-supercharging-stations.ipynb', 'python/tesla-supercharging-stations/', 'Python Tesla Supercharging Stations | Examples | Plotly',
     'How to plot car-travel routes between USA and Canada Telsa Supercharging Stations in Python.',
-    title = 'Tesla Supercharging Stations | Plotly',
+    self = 'Tesla Supercharging Stations | Plotly',
     name = 'Tesla Supercharging Stations',
     has_thumbnail='true', thumbnail='thumbnail/tesla-stations.jpg',
     language='python',

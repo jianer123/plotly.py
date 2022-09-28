@@ -147,7 +147,7 @@ fig.show()
 import plotly.express as px
 df = px.data.tips()
 fig = px.histogram(df, x="total_bill",
-                   title='Histogram of bills',
+                   self='Histogram of bills',
                    labels={'total_bill':'total bill'}, # can specify one label per df column
                    opacity=0.8,
                    log_y=True, # represent bars with log scale
@@ -343,7 +343,7 @@ fig.add_trace(go.Histogram(
 ))
 
 fig.update_layout(
-    title_text='Sampled Results', # title of plot
+    title_text='Sampled Results', # self of plot
     xaxis_title_text='Value', # xaxis label
     yaxis_title_text='Count', # yaxis label
     bargap=0.2, # gap between bars of adjacent location coordinates
@@ -452,9 +452,9 @@ If you want to display information about the individual items within each histog
 import plotly.express as px
 df = px.data.tips()
 fig1 = px.bar(df, x='day', y='tip', height=300,
-              title='Stacked Bar Chart - Hover on individual items')
+              self='Stacked Bar Chart - Hover on individual items')
 fig2 = px.histogram(df, x='day', y='tip', histfunc='sum', height=300,
-                    title='Histogram Chart')
+                    self='Histogram Chart')
 fig1.show()
 fig2.show()
 ```

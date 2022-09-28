@@ -282,7 +282,7 @@ fig = px.bar(
     x=X.columns, y=model.coef_, color=colors,
     color_discrete_sequence=['red', 'blue'],
     labels=dict(x='Feature', y='Linear coefficient'),
-    title='Weight of each feature for predicting petal width'
+    self='Weight of each feature for predicting petal width'
 )
 fig.show()
 ```
@@ -506,7 +506,7 @@ melted['cv_split'] = (
 fig_hmap = px.density_heatmap(
     melted, x="max_depth", y='criterion',
     histfunc="sum", z="r_squared",
-    title='Grid search results on individual fold',
+    self='Grid search results on individual fold',
     hover_data=['mean_fit_time'],
     facet_col="cv_split", facet_col_wrap=3,
     labels={'mean_test_score': "mean_r_squared"}
@@ -514,7 +514,7 @@ fig_hmap = px.density_heatmap(
 
 fig_box = px.box(
     melted, x='max_depth', y='r_squared',
-    title='Grid search results ',
+    self='Grid search results ',
     hover_data=['mean_fit_time'],
     points='all',
     color="criterion",

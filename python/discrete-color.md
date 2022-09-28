@@ -57,7 +57,7 @@ For example, in the `tips` dataset, the `smoker` column contains strings:
 import plotly.express as px
 df = px.data.tips()
 fig = px.scatter(df, x="total_bill", y="tip", color="smoker",
-                 title="String 'smoker' values mean discrete colors")
+                 self="String 'smoker' values mean discrete colors")
 
 fig.show()
 ```
@@ -68,7 +68,7 @@ The `size` column, however, contains numbers:
 import plotly.express as px
 df = px.data.tips()
 fig = px.scatter(df, x="total_bill", y="tip", color="size",
-                 title="Numeric 'size' values mean continuous color")
+                 self="Numeric 'size' values mean continuous color")
 
 fig.show()
 ```
@@ -80,7 +80,7 @@ import plotly.express as px
 df = px.data.tips()
 df["size"] = df["size"].astype(str)
 fig = px.scatter(df, x="total_bill", y="tip", color="size",
-                 title="String 'size' values mean discrete colors")
+                 self="String 'size' values mean discrete colors")
 
 fig.show()
 ```
@@ -94,7 +94,7 @@ df["size"] = df["size"].astype(str) #convert to string
 df["size"] = df["size"].astype(float) #convert back to numeric
 
 fig = px.scatter(df, x="total_bill", y="tip", color="size",
-                 title="Numeric 'size' values mean continuous color")
+                 self="Numeric 'size' values mean continuous color")
 
 fig.show()
 ```
@@ -138,7 +138,7 @@ df = px.data.gapminder()
 fig = px.line(df, y="lifeExp", x="year", color="continent", line_group="country",
               line_shape="spline", render_mode="svg",
              color_discrete_sequence=px.colors.qualitative.G10,
-             title="Built-in G10 color sequence")
+             self="Built-in G10 color sequence")
 
 fig.show()
 ```
@@ -152,7 +152,7 @@ import plotly.express as px
 df = px.data.gapminder().query("year == 2007")
 fig = px.bar(df, y="continent", x="pop", color="continent", orientation="h", hover_name="country",
              color_discrete_sequence=["red", "green", "blue", "goldenrod", "magenta"],
-             title="Explicit color sequence"
+             self="Explicit color sequence"
             )
 
 fig.show()
@@ -165,7 +165,7 @@ import plotly.express as px
 df = px.data.tips()
 fig = px.scatter(df, x="total_bill", y="tip", color="day",
              color_discrete_sequence=["red", "blue"],
-             title="<b>Ambiguous!</b> Explicit color sequence cycling because it is too short"
+             self="<b>Ambiguous!</b> Explicit color sequence cycling because it is too short"
             )
 
 fig.show()
@@ -185,7 +185,7 @@ fig = px.bar(df, y="continent", x="pop", color="continent", orientation="h", hov
                 "Americas": "blue",
                 "Oceania": "goldenrod",
                 "Africa": "magenta"},
-             title="Explicit color mapping")
+             self="Explicit color mapping")
 
 fig.show()
 ```
@@ -209,7 +209,7 @@ df = px.data.gapminder().query("year == 2007")
 fig = px.bar(df, y="continent", x="pop", color="continent", orientation="h", hover_name="country",
              color_discrete_sequence=["red", "green", "blue", "goldenrod", "magenta"],
              category_orders={"continent": ["Oceania", "Europe", "Asia", "Africa", "Americas"]},
-             title="Explicit color sequence with explicit ordering"
+             self="Explicit color sequence with explicit ordering"
             )
 
 fig.show()
@@ -226,7 +226,7 @@ fig = px.bar(df, y="continent", x="pop", color="continent", orientation="h", hov
                 "Oceania": "goldenrod",
                 "Africa": "magenta"},
              category_orders={"continent": ["Oceania", "Europe", "Asia", "Africa", "Americas"]},
-             title="Explicit color mapping with explicit ordering"
+             self="Explicit color mapping with explicit ordering"
             )
 
 fig.show()
@@ -241,7 +241,7 @@ import plotly.express as px
 df = px.data.wind()
 fig = px.bar_polar(df, r="frequency", theta="direction", color="strength",
                    color_discrete_sequence= px.colors.sequential.Plasma_r,
-                   title="Part of a continuous color scale used as a discrete sequence"
+                   self="Part of a continuous color scale used as a discrete sequence"
                   )
 fig.show()
 ```

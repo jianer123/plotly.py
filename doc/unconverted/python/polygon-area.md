@@ -177,7 +177,7 @@ import publisher
 publisher.publish(
     'python_Polygon_Area.ipynb', 'python/polygon-area/', 'Polygon Area | plotly',
     'Learn how to find the area of any simple polygon',
-    title='Polygon Area in Python. | plotly',
+    self='Polygon Area in Python. | plotly',
     name='Polygon Area',
     language='python',
     page_type='example_index', has_thumbnail='false', display_as='mathematics', order=8,

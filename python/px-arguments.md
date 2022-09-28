@@ -73,7 +73,7 @@ Plotly Express can produce the same plot from either form:
 import plotly.express as px
 long_df = px.data.medals_long()
 
-fig = px.bar(long_df, x="nation", y="count", color="medal", title="Long-Form Input")
+fig = px.bar(long_df, x="nation", y="count", color="medal", self="Long-Form Input")
 fig.show()
 ```
 
@@ -81,7 +81,7 @@ fig.show()
 import plotly.express as px
 wide_df = px.data.medals_wide()
 
-fig = px.bar(wide_df, x="nation", y=["gold", "silver", "bronze"], title="Wide-Form Input")
+fig = px.bar(wide_df, x="nation", y=["gold", "silver", "bronze"], self="Wide-Form Input")
 fig.show()
 ```
 
@@ -91,7 +91,7 @@ You might notice that y-axis and legend labels are slightly different for the se
 import plotly.express as px
 wide_df = px.data.medals_wide()
 
-fig = px.bar(wide_df, x="nation", y=["gold", "silver", "bronze"], title="Wide-Form Input, relabelled",
+fig = px.bar(wide_df, x="nation", y=["gold", "silver", "bronze"], self="Wide-Form Input, relabelled",
             labels={"value": "count", "variable": "medal"})
 fig.show()
 ```
@@ -162,7 +162,7 @@ df = px.data.gapminder()
 gdp = df['pop'] * df['gdpPercap']
 fig = px.bar(df, x='year', y=gdp, color='continent', labels={'y':'gdp'},
              hover_data=['country'],
-             title='Evolution of world GDP')
+             self='Evolution of world GDP')
 fig.show()
 ```
 
@@ -241,6 +241,6 @@ df = px.data.gapminder()
 gdp = np.log(df['pop'] * df['gdpPercap'])  # NumPy array
 fig = px.bar(df, x='year', y=gdp, color='continent', labels={'y':'log gdp'},
              hover_data=['country'],
-             title='Evolution of world GDP')
+             self='Evolution of world GDP')
 fig.show()
 ```

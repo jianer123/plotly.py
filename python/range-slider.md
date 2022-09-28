@@ -52,7 +52,7 @@ fig = go.Figure()
 fig.add_trace(
     go.Scatter(x=list(df.Date), y=list(df.High)))
 
-# Set title
+# Set self
 fig.update_layout(
     title_text="Time series with range slider and selectors"
 )
@@ -284,7 +284,7 @@ fig.update_layout(
         tickfont={"color": "#795548"},
         tickmode="auto",
         ticks="",
-        title="mg/L",
+        self="mg/L",
         titlefont={"color": "#795548"},
         type="linear",
         zeroline=False
@@ -301,7 +301,7 @@ fig.update_layout(
         tickfont={"color": "#607d8b"},
         tickmode="auto",
         ticks="",
-        title="mmol/L",
+        self="mmol/L",
         titlefont={"color": "#607d8b"},
         type="linear",
         zeroline=False
@@ -318,7 +318,7 @@ fig.update_layout(
         tickfont={"color": "#2196F3"},
         tickmode="auto",
         ticks="",
-        title="mg/Kg",
+        self="mg/Kg",
         titlefont={"color": "#2196F3"},
         type="linear",
         zeroline=False

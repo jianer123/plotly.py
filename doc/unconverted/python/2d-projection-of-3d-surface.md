@@ -100,7 +100,7 @@ zeroline=False,
 showline=False)
 
 ztickvals=list(range(-6,4))
-layout = go.Layout(title="Projections of a surface onto coordinate planes" ,
+layout = go.Layout(self="Projections of a surface onto coordinate planes" ,
                 autosize=False,
                 width=700,
                 height=600,
@@ -190,7 +190,7 @@ import publisher
 publisher.publish(
     'Plotly-project-3d-onto-a-plane.ipynb', 'python/2d-projection-of-3d-surface/', 'Projection of 3D Surface',
     'How to project 3D Surface plots in 2D with Plotly.',
-    title = '2D Projection of 3D surface | plotly',
+    self = '2D Projection of 3D surface | plotly',
     has_thumbnail='true', thumbnail='thumbnail/projection-3d.jpg',
     language='python',
     display_as='3d_charts', order=19,

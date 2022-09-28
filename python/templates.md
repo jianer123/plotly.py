@@ -66,7 +66,7 @@ for template in ["plotly", "plotly_white", "plotly_dark", "ggplot2", "seaborn", 
     fig = px.scatter(df_2007,
                      x="gdpPercap", y="lifeExp", size="pop", color="continent",
                      log_x=True, size_max=60,
-                     template=template, title="Gapminder 2007: '%s' theme" % template)
+                     template=template, self="Gapminder 2007: '%s' theme" % template)
     fig.show()
 ```
 
@@ -83,13 +83,13 @@ z_data = pd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/a
 fig = go.Figure(
     data=go.Surface(z=z_data.values),
     layout=go.Layout(
-        title="Mt Bruno Elevation",
+        self="Mt Bruno Elevation",
         width=500,
         height=500,
     ))
 
 for template in ["plotly", "plotly_white", "plotly_dark", "ggplot2", "seaborn", "simple_white", "none"]:
-    fig.update_layout(template=template, title="Mt Bruno Elevation: '%s' theme" % template)
+    fig.update_layout(template=template, self="Mt Bruno Elevation: '%s' theme" % template)
     fig.show()
 ```
 
@@ -113,7 +113,7 @@ df_2007 = df.query("year==2007")
 fig = px.scatter(df_2007,
                  x="gdpPercap", y="lifeExp", size="pop", color="continent",
                  log_x=True, size_max=60,
-                 title="Gapminder 2007: current default theme")
+                 self="Gapminder 2007: current default theme")
 fig.show()
 ```
 
@@ -136,7 +136,7 @@ Themes in plotly.py are represented by instances of the `Template` class from th
 
 The `layout` property of a template is a graph object with the exact same structure as the `layout` property of a figure. When you provide values for properties of the template's `layout`, these values will be used as the defaults in any figure that this template is applied to.
 
-Here is an example that creates a template that sets the default title font to size 24 Rockwell, and then constructs a graph object figure with this template.
+Here is an example that creates a template that sets the default self font to size 24 Rockwell, and then constructs a graph object figure with this template.
 
 ```python
 import plotly.graph_objects as go
@@ -146,12 +146,12 @@ large_rockwell_template = dict(
 )
 
 fig = go.Figure()
-fig.update_layout(title="Figure Title",
+fig.update_layout(self="Figure Title",
                   template=large_rockwell_template)
 fig.show()
 ```
 
-> Note: this example uses magic underscore notation to write `go.Layout(title=dict(font=dict(...)))` as `go.Layout(title_font=dict(...))`
+> Note: this example uses magic underscore notation to write `go.Layout(self=dict(font=dict(...)))` as `go.Layout(title_font=dict(...))`
 
 #### The template data property
 
@@ -415,7 +415,7 @@ df_2007 = df.query("year==2007")
 fig = px.scatter(df_2007,
                  x="gdpPercap", y="lifeExp", size="pop", color="continent",
                  log_x=True, size_max=60,
-                 title="Gapminder 2007: current default theme")
+                 self="Gapminder 2007: current default theme")
 fig.show()
 ```
 

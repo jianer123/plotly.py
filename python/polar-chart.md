@@ -137,7 +137,7 @@ fig.add_trace(go.Scatterpolar(
 
 
 fig.update_layout(
-    title = 'Mic Patterns',
+    self = 'Mic Patterns',
     showlegend = False
 )
 
@@ -358,7 +358,7 @@ fig.add_trace(go.Scatterpolargl(
 fig.update_traces(mode="markers", marker=dict(line_color='white', opacity=0.7))
 
 fig.update_layout(
-    title = "Hobbs-Pearson Trials",
+    self = "Hobbs-Pearson Trials",
     font_size = 15,
     showlegend = False,
     polar = dict(

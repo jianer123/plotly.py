@@ -57,7 +57,7 @@ data = [dict(
 )]
 
 layout = dict(
-    title = 'Scores > 4'
+    self = 'Scores > 4'
 )
 
 fig_dict = dict(data=data, layout=layout)

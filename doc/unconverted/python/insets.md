@@ -77,7 +77,7 @@ import publisher
 publisher.publish(
     'inset.ipynb', 'python/insets/', 'Inset Plots | plotly',
     'How to make an inset graph in python.',
-    title = 'Inset Plots | plotly',
+    self = 'Inset Plots | plotly',
     name = 'Inset Plots',
     has_thumbnail='true', thumbnail='thumbnail/insets.jpg',
     language='python', page_type='example_index',

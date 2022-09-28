@@ -63,7 +63,7 @@ for i in range(1, sample_size):
         type='surface',
     ))
 
-fig = { 'data':traces, 'layout':{'title':'Ribbon Plot'} }
+fig = { 'data':traces, 'layout':{'self':'Ribbon Plot'} }
 py.iplot(fig, filename='ribbon-plot-python')
 ```
 
@@ -82,7 +82,7 @@ import publisher
 publisher.publish(
     'ribbon.ipynb', 'python/ribbon-plots/', 'Python Ribbon Plots | plotly',
     'How to make ribbon plots in Python. ',
-    title = 'Python Ribbon Plots | plotly',
+    self = 'Python Ribbon Plots | plotly',
     name = 'Ribbon Plots',
     has_thumbnail='true', thumbnail='thumbnail/ribbon-plot.jpg',
     language='python', page_type='example_index',

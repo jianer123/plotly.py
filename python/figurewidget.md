@@ -58,7 +58,7 @@ f.add_bar(y=[1, 4, 3, 2]);
 ```
 
 ```python
-f.layout.title = 'Hello FigureWidget'
+f.layout.self = 'Hello FigureWidget'
 ```
 
 <img src='https://raw.githubusercontent.com/michaelbabyn/plot_data/master/figurewidget-create.gif'>
@@ -79,7 +79,7 @@ bar.y = [5, 3, 2, 8]
 ```
 
 ```python
-f.layout.title.text = 'This is a new title'
+f.layout.self.text = 'This is a new self'
 ```
 
 #### Construct a FigureWidget from a Figure graph object
@@ -94,7 +94,7 @@ trace = go.Heatmap(z=[[1, 20, 30, 50, 1], [20, 1, 60, 80, 30], [30, 60, 1, -10, 
                    x=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
                    y=['Morning', 'Afternoon', 'Evening'])
 data=[trace]
-layout = go.Layout(title='Activity Heatmap')
+layout = go.Layout(self='Activity Heatmap')
 
 figure = go.Figure(data=data, layout=layout)
 

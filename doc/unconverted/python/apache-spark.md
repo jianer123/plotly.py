@@ -281,7 +281,7 @@ import publisher
 publisher.publish(
     'apachespark.ipynb', 'python/apache-spark/', 'Plot Data from Apache Spark',
     'A tutorial showing how to plot Apache Spark DataFrames with Plotly',
-    title='Plotting Spark DataFrames | Plotly', has_thumbnail='false',
+    self='Plotting Spark DataFrames | Plotly', has_thumbnail='false',
     language='python', page_type='example_index', display_as='databases', order=2,
     redirect_from= 'ipython-notebooks/apache-spark/')
 ```

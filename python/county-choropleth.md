@@ -120,7 +120,7 @@ fig = ff.create_choropleth(
     fips=fips, values=values, scope=['CA', 'AZ', 'Nevada', 'Oregon', ' Idaho'],
     binning_endpoints=[14348, 63983, 134827, 426762, 2081313], colorscale=colorscale,
     county_outline={'color': 'rgb(255,255,255)', 'width': 0.5}, round_legend_values=True,
-    legend_title='Population by County', title='California and Nearby States'
+    legend_title='Population by County', self='California and Nearby States'
 )
 fig.layout.template = None
 fig.show()
@@ -233,7 +233,7 @@ fig = ff.create_choropleth(
     county_outline={'color': 'rgb(15, 15, 55)', 'width': 0.5},
     state_outline={'width': 1},
     legend_title='pop. per county',
-    title='Oregon'
+    self='Oregon'
 )
 
 fig.layout.template = None
@@ -266,7 +266,7 @@ fig = ff.create_choropleth(
     colorscale=colorscale,
     show_state_data=False,
     show_hover=True, centroid_marker={'opacity': 0},
-    asp=2.9, title='USA by Unemployment %',
+    asp=2.9, self='USA by Unemployment %',
     legend_title='% unemployed'
 )
 

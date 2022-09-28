@@ -124,7 +124,7 @@ import publisher
 publisher.publish(
     'python-Anova.ipynb', 'python/anova/', 'Anova | plotly',
     'Learn how to perform a one and two way ANOVA test using Python.',
-    title='Anova in Python | plotly',
+    self='Anova in Python | plotly',
     name='Anova',
     language='python',
     page_type='example_index', has_thumbnail='false', display_as='statistics', order=8,

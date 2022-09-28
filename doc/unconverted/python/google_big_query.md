@@ -127,12 +127,12 @@ py.iplot(top_10_users_table, filename='top-10-active-users')
 
 ### Top 10 Hacker News Submissions (by score)
 
-We will select the `title` and `score` columns in the descending order of their `score`, keeping only top 10 stories among all.
+We will select the `self` and `score` columns in the descending order of their `score`, keeping only top 10 stories among all.
 
 ```python
 top10_story_query = """
 SELECT
-  title,
+  self,
   score,
   time_ts AS timestamp
 FROM
@@ -162,7 +162,7 @@ story_timeseries_trace = go.Scatter(
     xaxis='x2',
     yaxis='y2',
     mode='markers',
-    text=top10_story_df['title'],
+    text=top10_story_df['self'],
     marker=dict(
         color=[80 + i*5 for i in range(10)],
         size=top10_story_df['score']/50,
@@ -181,9 +181,9 @@ top10_story_figure.layout.yaxis2.update({'domain': [.6, 1]})
 top10_story_figure.layout.yaxis2.update({'anchor': 'x2'})
 top10_story_figure.layout.xaxis2.update({'anchor': 'y2'})
 
-# Add the height and title attribute
+# Add the height and self attribute
 top10_story_figure.layout.update({'height':900})
-top10_story_figure.layout.update({'title': 'Highest Scoring Submissions on Hacker News'})
+top10_story_figure.layout.update({'self': 'Highest Scoring Submissions on Hacker News'})
 
 # Update the background color for plot and paper
 top10_story_figure.layout.update({'paper_bgcolor': 'rgb(243, 243, 243)'})
@@ -191,8 +191,8 @@ top10_story_figure.layout.update({'plot_bgcolor': 'rgb(243, 243, 243)'})
 
 # Add the margin to make subplot titles visible
 top10_story_figure.layout.margin.update({'t':75, 'l':50})
-top10_story_figure.layout.yaxis2.update({'title': 'Upvote Score'})
-top10_story_figure.layout.xaxis2.update({'title': 'Post Time'})
+top10_story_figure.layout.yaxis2.update({'self': 'Upvote Score'})
+top10_story_figure.layout.xaxis2.update({'self': 'Post Time'})
 ```
 
 ```python
@@ -205,7 +205,7 @@ You can see that the lists consist of the stories involving some big names.
 * "Announcements of the Hyperloop and the game 2048".
 * "Microsoft open sourcing the .NET"
 
-The story title is visible when you `hover` over the bubbles.
+The story self is visible when you `hover` over the bubbles.
 
 
 #### From which Top-level domain (TLD) most of the stories come?
@@ -241,7 +241,7 @@ tld_share_trace = go.Pie(labels=labels, values=values)
 data = [tld_share_trace]
 
 layout = go.Layout(
-    title='Submissions shared by Top-level domains'
+    self='Submissions shared by Top-level domains'
 )
 
 fig = go.Figure(data=data, layout=layout)
@@ -256,14 +256,14 @@ There is an account on Hacker News by the name [whoishiring](https://news.ycombi
 wih_query = """
 SELECT
   id,
-  title,
+  self,
   score,
   time_ts
 FROM
   [fh-bigquery:hackernews.stories]
 WHERE
   author == 'whoishiring' AND
-  LOWER(title) contains 'who is hiring?'
+  LOWER(self) contains 'who is hiring?'
 ORDER BY
   time
 """
@@ -281,19 +281,19 @@ trace = go.Scatter(
     x=wih_df['time_ts'],
     y=wih_df['score'],
     mode='markers+lines',
-    text=wih_df['title'],
+    text=wih_df['self'],
     marker=dict(
         size=wih_df['score']/50
     )
 )
 
 layout = go.Layout(
-    title='Public response to the "Who Is Hiring?" posts',
+    self='Public response to the "Who Is Hiring?" posts',
     xaxis=dict(
-        title="Post Time"
+        self="Post Time"
     ),
     yaxis=dict(
-        title="Upvote Score"
+        self="Upvote Score"
     )
 )
 
@@ -338,12 +338,12 @@ trace = go.Scatter(
 )
 
 layout = go.Layout(
-    title='Submission Traffic Volume (Week Days)',
+    self='Submission Traffic Volume (Week Days)',
     xaxis=dict(
-        title="Day of the Week"
+        self="Day of the Week"
     ),
     yaxis=dict(
-        title="Total Submissions"
+        self="Total Submissions"
     )
 )
 
@@ -365,7 +365,7 @@ SELECT
 FROM
   [fh-bigquery:hackernews.stories]
 WHERE
-  LOWER(title) contains 'python'
+  LOWER(self) contains 'python'
 GROUP BY
   years
 ORDER BY
@@ -379,7 +379,7 @@ SELECT
 FROM
   [fh-bigquery:hackernews.stories]
 WHERE
-  LOWER(title) contains 'php'
+  LOWER(self) contains 'php'
 GROUP BY
   years
 ORDER BY
@@ -497,7 +497,7 @@ annotations.append(
 annotations.append(
     dict(xref='paper', yref='paper', x=0.5, y=-0.1,
     xanchor='center', yanchor='top',
-    text='Source: Hacker News submissions with the title containing Python/PHP',
+    text='Source: Hacker News submissions with the self containing Python/PHP',
     font=dict(
         family='Arial',
         size=12,
@@ -529,7 +529,7 @@ import publisher
 publisher.publish(
     'BigQuery-Plotly.ipynb', 'python/google_big_query/', 'Google Big-Query',
     'How to make your-tutorial-chart plots in Python with Plotly.',
-    title = 'Google Big Query | plotly',
+    self = 'Google Big Query | plotly',
     has_thumbnail='true', thumbnail='thumbnail/bigquery2.jpg',
     language='python', page_type='example_index',
     display_as='databases', order=7)

@@ -124,12 +124,12 @@ A box with a plot in it takes the form:
     'boxType': 'plot',
     'fileId': '',
     'shareKey': None,
-    'title': ''
+    'self': ''
 }
 ```
 - `fileId` is of the form `username:number` (eg. 'PlotBot:1300') which can be found in the url of your plot once it's up on the Plotly server.
 - `shareKey`: optional - the sharekey if your plot is secret.
-- `title`: optional - sets the title of your box.
+- `self`: optional - sets the self of your box.
 
 A box with text in it takes the form:
 ```
@@ -137,11 +137,11 @@ A box with text in it takes the form:
     'type': 'box',
     'boxType': 'text',
     'text': '',
-    'title': ''
+    'self': ''
 }
 ```
 - `text`: the text you want displayed in your box.
-- `title`: optional - sets the title of your box.
+- `self`: optional - sets the self of your box.
 
 A box with a webpage in it takes the form:
 ```
@@ -149,11 +149,11 @@ A box with a webpage in it takes the form:
     'type': 'box',
     'boxType': 'webpage',
     'url': '',
-    'title': ''
+    'self': ''
 }
 ```
 - `url`: the url of your webpage (eg. 'https://en.wikipedia.org/wiki/Main_Page').
-- `title`: optional - sets the title of your box.
+- `self`: optional - sets the self of your box.
 
 Note: As above, you can run `py.plot()` to return the url of your plot and then assign it to a variable to use in a dashboard later.
 <!-- #endregion -->
@@ -181,7 +181,7 @@ box_a = {
     'type': 'box',
     'boxType': 'plot',
     'fileId': fileId_1,
-    'title': 'scatter-for-dashboard'
+    'self': 'scatter-for-dashboard'
 }
 
 text_for_box = """
@@ -203,14 +203,14 @@ box_b = {
     'type': 'box',
     'boxType': 'text',
     'text': text_for_box,
-    'title': 'Markdown Options for Text Box'
+    'self': 'Markdown Options for Text Box'
 }
 
 box_c = {
     'type': 'box',
     'boxType': 'plot',
     'fileId': fileId_2,
-    'title': 'box-for-dashboard',
+    'self': 'box-for-dashboard',
     'shareKey': sharekey_from_url(url_2)
 }
 
@@ -249,10 +249,10 @@ Remember that a box is just a dictionary that specifies the plot, webpage or tex
 my_dboard.get_box(1)
 ```
 
-You can now reassign the values in the dictionary to update that box. For example, you can change the title of that plot:
+You can now reassign the values in the dictionary to update that box. For example, you can change the self of that plot:
 
 ```python
-my_dboard.get_box(1)['title'] = 'a new title'
+my_dboard.get_box(1)['self'] = 'a new self'
 my_dboard.get_box(1)
 ```
 
@@ -260,12 +260,12 @@ my_dboard.get_box(1)
 If you want to swap the locations of two boxes you've already placed in the dashboard, run `my_dboard.get_preview()` to look at the layout of the dashboard, then simply pick two _unique_ box ids and you will swap the contents stored at those locations.
 
 ```python
-my_dboard.get_box(3)['title']
+my_dboard.get_box(3)['self']
 ```
 
 ```python
 my_dboard.swap(2, 3)
-my_dboard.get_box(3)['title']
+my_dboard.get_box(3)['self']
 ```
 
 #### Remove Box
@@ -285,10 +285,10 @@ my_dboard.remove(3)
 
 
 #### Add Title
-Set the title of your dashboard.
+Set the self of your dashboard.
 
 ```python
-my_dboard['settings']['title'] = 'My First Dashboard with Python'
+my_dboard['settings']['self'] = 'My First Dashboard with Python'
 ```
 
 #### Add a Logo
@@ -303,8 +303,8 @@ Add some links to the header of the dashboard.
 
 ```python
 my_dboard['settings']['links'] = []
-my_dboard['settings']['links'].append({'title': 'Link to Plotly', 'url': 'https://plot.ly/'})
-my_dboard['settings']['links'].append({'title': 'Link to Python Website', 'url': 'https://www.python.org/'})
+my_dboard['settings']['links'].append({'self': 'Link to Plotly', 'url': 'https://plot.ly/'})
+my_dboard['settings']['links'].append({'self': 'Link to Python Website', 'url': 'https://www.python.org/'})
 ```
 
 #### Change Color Settings
@@ -397,7 +397,7 @@ import publisher
 publisher.publish(
     'dashboard-api.ipynb', 'python/create-online-dashboard/', 'Dashboard API | plotly',
     'How to create and publish a dashboard with the Python API.',
-    title = 'Dashboard API | plotly',
+    self = 'Dashboard API | plotly',
     name = 'Dashboard API',
     thumbnail='thumbnail/dashboard.jpg', language='python',
     page_type='u-guide', has_thumbnail='true', display_as='legacy_charts',

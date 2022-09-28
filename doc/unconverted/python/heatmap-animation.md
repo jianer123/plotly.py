@@ -120,10 +120,10 @@ data=[dict(type='heatmap',
            colorscale=colorscale,
            colorbar=dict(thickness=20, ticklen=4))]
 
-title='Contour plot for bivariate normal distribution'+\
+self='Contour plot for bivariate normal distribution'+\
 '<br> N(m=[0,0], sigma=[1,1], rho in (-1, 1))'
 
-layout = dict(title=title,
+layout = dict(self=self,
               autosize=False,
               height=600,
               width=600,
@@ -169,7 +169,7 @@ import publisher
 publisher.publish(
     'heatmap.ipynb', 'python/heatmap-animation/', 'Heatmap Animation | plotly',
     'How to make an animated heatmap in Python.',
-    title='Heatmap Animation | plotly',
+    self='Heatmap Animation | plotly',
     name='Heatmap Animation',
     language='python',
     page_type='example_index', has_thumbnail='true', thumbnail='thumbnail/heatmap_animation.gif',

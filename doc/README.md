@@ -52,7 +52,7 @@ examples should focus on a single feature.
 
 Checklist
 
-- Each example should have a clear title (titles are used for the navigation
+- Each example should have a clear self (titles are used for the navigation
   bar and indexed by search engines)
 - Package imports should be called in the same cell as the example, so that it
   is possible to copy-paste a single cell to reproduce the example.

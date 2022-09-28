@@ -83,7 +83,7 @@ import publisher
 publisher.publish(
     'python_Numerical_Differentiation.ipynb', 'python/numerical-differentiation/', 'Numerical Differentiation | plotly',
     'Learn how to differentiate a sequence or list of values numerically',
-    title='Numerical Differentiation in Python. | plotly',
+    self='Numerical Differentiation in Python. | plotly',
     name='Numerical Differentiation',
     language='python',
     page_type='example_index', has_thumbnail='false', display_as='mathematics', order=6,

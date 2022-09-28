@@ -229,7 +229,7 @@ fig.add_trace(go.Scatter(x=[3,3.5,4,4.5,5], y=[0,1,2,1,0],
                     hoverinfo='text+x+y'))
 
 fig.update_layout(
-    title = "hover on <i>points</i> or <i>fill</i>",
+    self = "hover on <i>points</i> or <i>fill</i>",
     xaxis_range = [0,5.2],
     yaxis_range = [0,3]
 )

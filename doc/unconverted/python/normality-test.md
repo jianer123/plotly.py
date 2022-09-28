@@ -148,13 +148,13 @@ fig.add_trace({
 
 
 fig['layout'].update({
-    'title': 'Quantile-Quantile Plot',
+    'self': 'Quantile-Quantile Plot',
     'xaxis': {
-        'title': 'Theoritical Quantities',
+        'self': 'Theoritical Quantities',
         'zeroline': False
     },
     'yaxis': {
-        'title': 'Sample Quantities'
+        'self': 'Sample Quantities'
     },
     'showlegend': False,
     'width': 800,
@@ -375,7 +375,7 @@ import publisher
 publisher.publish(
     'python-Normality-Test.ipynb', 'python/normality-test/', 'Normality Tests',
     'Learn how to generate various normality tests using Python. ',
-    title = 'Normality Tests | Plotly',
+    self = 'Normality Tests | Plotly',
     has_thumbnail='false',
     language='python',
     # page_type='example_index', // note this is only if you want the tutorial to appear on the main page: plot.ly/python

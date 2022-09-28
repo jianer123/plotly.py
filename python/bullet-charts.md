@@ -46,7 +46,7 @@ fig = go.Figure(go.Indicator(
     value = 220,
     delta = {'reference': 300},
     domain = {'x': [0, 1], 'y': [0, 1]},
-    title = {'text': "Profit"}))
+    self = {'text': "Profit"}))
 fig.update_layout(height = 250)
 
 fig.show()
@@ -61,7 +61,7 @@ import plotly.graph_objects as go
 fig = go.Figure(go.Indicator(
     mode = "number+gauge+delta", value = 220,
     domain = {'x': [0.1, 1], 'y': [0, 1]},
-    title = {'text' :"<b>Profit</b>"},
+    self = {'text' :"<b>Profit</b>"},
     delta = {'reference': 200},
     gauge = {
         'shape': "bullet",
@@ -87,7 +87,7 @@ fig = go.Figure(go.Indicator(
     mode = "number+gauge+delta", value = 220,
     domain = {'x': [0, 1], 'y': [0, 1]},
     delta = {'reference': 280, 'position': "top"},
-    title = {'text':"<b>Profit</b><br><span style='color: gray; font-size:0.8em'>U.S. $</span>", 'font': {"size": 14}},
+    self = {'text':"<b>Profit</b><br><span style='color: gray; font-size:0.8em'>U.S. $</span>", 'font': {"size": 14}},
     gauge = {
         'shape': "bullet",
         'axis': {'range': [None, 300]},
@@ -115,7 +115,7 @@ fig.add_trace(go.Indicator(
     mode = "number+gauge+delta", value = 180,
     delta = {'reference': 200},
     domain = {'x': [0.25, 1], 'y': [0.08, 0.25]},
-    title = {'text': "Revenue"},
+    self = {'text': "Revenue"},
     gauge = {
         'shape': "bullet",
         'axis': {'range': [None, 300]},
@@ -132,7 +132,7 @@ fig.add_trace(go.Indicator(
     mode = "number+gauge+delta", value = 35,
     delta = {'reference': 200},
     domain = {'x': [0.25, 1], 'y': [0.4, 0.6]},
-    title = {'text': "Profit"},
+    self = {'text': "Profit"},
     gauge = {
         'shape': "bullet",
         'axis': {'range': [None, 100]},
@@ -149,7 +149,7 @@ fig.add_trace(go.Indicator(
     mode = "number+gauge+delta", value = 220,
     delta = {'reference': 200},
     domain = {'x': [0.25, 1], 'y': [0.7, 0.9]},
-    title = {'text' :"Satisfaction"},
+    self = {'text' :"Satisfaction"},
     gauge = {
         'shape': "bullet",
         'axis': {'range': [None, 300]},

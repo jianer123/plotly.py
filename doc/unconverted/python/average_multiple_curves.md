@@ -100,7 +100,7 @@ import publisher
 publisher.publish(
     'python_Average_Multiple_Curves.ipynb', 'python/average_multiple_curves/', 'Average Multiple Curves | plotly',
     'Learn how to average the values of multiple curves with Python.',
-    title='Average Multiple Curves in Python | plotly',
+    self='Average Multiple Curves in Python | plotly',
     name='Average Multiple Curves',
     language='python',
     page_type='example_index', has_thumbnail='false', display_as='mathematics', order=9,

@@ -71,7 +71,7 @@ trace = go.Histogram(x=x, xbins=dict(start=np.min(x), size=0.25, end=np.max(x)),
                    marker=dict(color='rgb(0, 0, 100)'))
 
 layout = go.Layout(
-    title="Histogram Frequency Counts"
+    self="Histogram Frequency Counts"
 )
 
 fig = go.Figure(data=go.Data([trace]), layout=layout)
@@ -88,7 +88,7 @@ trace = go.Histogram(x=x, xbins=dict(start=np.min(x), size=0.75, end=np.max(x)),
                    marker=dict(color='rgb(0, 0, 100)'))
 
 layout = go.Layout(
-    title="Histogram Frequency Counts"
+    self="Histogram Frequency Counts"
 )
 
 fig = go.Figure(data=go.Data([trace]), layout=layout)
@@ -106,7 +106,7 @@ import publisher
 publisher.publish(
     'python-Frequency-Counts.ipynb', 'python/frequency-counts/', 'Frequency Counts | plotly',
     'Learn how to perform frequency counts using Python.',
-    title='Frequency Counts in Python. | plotly',
+    self='Frequency Counts in Python. | plotly',
     name='Frequency Counts',
     language='python',
     page_type='example_index', has_thumbnail='false', display_as='statistics', order=2,

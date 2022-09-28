@@ -63,7 +63,7 @@ import plotly.express as px
 
 long_df = px.data.medals_long()
 
-fig = px.bar(long_df, x="nation", y="count", color="medal", title="Long-Form Input")
+fig = px.bar(long_df, x="nation", y="count", color="medal", self="Long-Form Input")
 fig.show()
 ```
 
@@ -79,7 +79,7 @@ import plotly.express as px
 
 wide_df = px.data.medals_wide()
 
-fig = px.bar(wide_df, x="nation", y=["gold", "silver", "bronze"], title="Wide-Form Input")
+fig = px.bar(wide_df, x="nation", y=["gold", "silver", "bronze"], self="Wide-Form Input")
 fig.show()
 ```
 
@@ -208,7 +208,7 @@ import plotly.express as px
 
 df = px.data.gapminder().query("continent == 'Europe' and year == 2007 and pop > 2.e6")
 fig = px.bar(df, y='pop', x='country', text_auto='.2s',
-            title="Default: various text sizes, positions and angles")
+            self="Default: various text sizes, positions and angles")
 fig.show()
 ```
 
@@ -221,7 +221,7 @@ import plotly.express as px
 
 df = px.data.gapminder().query("continent == 'Europe' and year == 2007 and pop > 2.e6")
 fig = px.bar(df, y='pop', x='country', text_auto='.2s',
-            title="Controlled text sizes, positions and angles")
+            self="Controlled text sizes, positions and angles")
 fig.update_traces(textfont_size=12, textangle=0, textposition="outside", cliponaxis=False)
 fig.show()
 ```
@@ -504,10 +504,10 @@ fig.add_trace(go.Bar(x=years,
                 ))
 
 fig.update_layout(
-    title='US Export of Plastic Scrap',
+    self='US Export of Plastic Scrap',
     xaxis_tickfont_size=14,
     yaxis=dict(
-        title='USD (millions)',
+        self='USD (millions)',
         titlefont_size=16,
         tickfont_size=14,
     ),

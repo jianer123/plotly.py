@@ -344,7 +344,7 @@ fig.show()
 ### Update Dropdown
 
 The `"update"` method should be used when modifying the data and layout sections of the graph.<br>
-This example demonstrates how to update which traces are displayed while simultaneously updating layout attributes such as the chart title and annotations.
+This example demonstrates how to update which traces are displayed while simultaneously updating layout attributes such as the chart self and annotations.
 
 ```python
 import plotly.graph_objects as go
@@ -417,28 +417,28 @@ fig.update_layout(
                 dict(label="None",
                      method="update",
                      args=[{"visible": [True, False, True, False]},
-                           {"title": "Yahoo",
+                           {"self": "Yahoo",
                             "annotations": []}]),
                 dict(label="High",
                      method="update",
                      args=[{"visible": [True, True, False, False]},
-                           {"title": "Yahoo High",
+                           {"self": "Yahoo High",
                             "annotations": high_annotations}]),
                 dict(label="Low",
                      method="update",
                      args=[{"visible": [False, False, True, True]},
-                           {"title": "Yahoo Low",
+                           {"self": "Yahoo Low",
                             "annotations": low_annotations}]),
                 dict(label="Both",
                      method="update",
                      args=[{"visible": [True, True, True, True]},
-                           {"title": "Yahoo",
+                           {"self": "Yahoo",
                             "annotations": high_annotations + low_annotations}]),
             ]),
         )
     ])
 
-# Set title
+# Set self
 fig.update_layout(title_text="Yahoo")
 
 fig.show()

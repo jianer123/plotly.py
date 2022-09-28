@@ -52,7 +52,7 @@ surface = go.Surface(x=x, y=y, z=z)
 data = [surface]
 
 layout = go.Layout(
-    title='Parametric Plot',
+    self='Parametric Plot',
     scene=dict(
         xaxis=dict(
             gridcolor='rgb(255, 255, 255)',
@@ -105,7 +105,7 @@ z = r * np.sin(phi) * np.sin(theta)
 surface = go.Surface(x=x, y=y, z=z, colorscale='Viridis')
 data = [surface]
 layout = go.Layout(
-    title='Another Parametric Plot',
+    self='Another Parametric Plot',
     scene=dict(
         xaxis=dict(
             gridcolor='rgb(255, 255, 255)',
@@ -151,7 +151,7 @@ import publisher
 publisher.publish(
     '3d-parametric.ipynb', 'python/3d-parametric-plots/', '3D Parametric Plots | plotly',
     'How to 3D Parameteric Plots in Python',
-    title= '3D Parametric Plots in Python | plotly',
+    self= '3D Parametric Plots in Python | plotly',
     name = 'Parametric Plots',
     has_thumbnail='true', thumbnail='thumbnail/parametric.jpg',
     language='python',

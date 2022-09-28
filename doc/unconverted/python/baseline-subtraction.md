@@ -133,7 +133,7 @@ import publisher
 publisher.publish(
     'python-Baseline-Subtraction.ipynb', 'python/baseline-subtraction/', 'Baseline Subtraction | plotly',
     'Learn how to subtract baseline estimates from data in Python.',
-    title='Baseline Subtraction in Python | plotly',
+    self='Baseline Subtraction in Python | plotly',
     name='Baseline Subtraction',
     language='python',
     page_type='example_index', has_thumbnail='false', display_as='peak-analysis', order=2,

@@ -346,7 +346,7 @@ fig = go.Figure(go.Scatter(mode="markers", x=namevariants, y=namestems, marker_s
                            marker_line_color="midnightblue", marker_color="lightskyblue",
                            marker_line_width=2, marker_size=15,
                            hovertemplate="name: %{y}%{x}<br>number: %{marker.symbol}<extra></extra>"))
-fig.update_layout(title="Mouse over symbols for name & number!",
+fig.update_layout(self="Mouse over symbols for name & number!",
                   xaxis_range=[-1,4], yaxis_range=[len(set(namestems)),-1],
                   margin=dict(b=0,r=0), xaxis_side="top", height=1400, width=400)
 fig.show()

@@ -246,9 +246,9 @@ py.iplot({'data': traces,
           'layout': go.Layout(
                 barmode='group',
                 xaxis={'tickangle': 40, 'autorange': False, 'range': [-0.5, 16]},
-                yaxis={'title': 'Percent of Complaints by City'},
+                yaxis={'self': 'Percent of Complaints by City'},
                 margin={'b': 150},
-                title='Relative Number of 311 Complaints by City')
+                self='Relative Number of 311 Complaints by City')
          }, filename='311/relative complaints by city', validate=False)
 ```
 
@@ -295,8 +295,8 @@ df = pd.read_sql_query('SELECT CreatedDate, '
 
 py.iplot({
     'data': [go.Bar(x=df['hour'], y=df['Complaints per Hour'])],
-    'layout': go.Layout(xaxis={'title': 'Hour in Day'},
-                     yaxis={'title': 'Number of Complaints'})}, filename='311/complaints per hour')
+    'layout': go.Layout(xaxis={'self': 'Hour in Day'},
+                     yaxis={'self': 'Number of Complaints'})}, filename='311/complaints per hour')
 ```
 
 ######  Filter noise complaints by hour
@@ -318,9 +318,9 @@ df = pd.read_sql_query('SELECT CreatedDate, '
 
 py.iplot({
     'data': [go.Bar(x=df['hour'], y=df['Complaints per Hour'])],
-    'layout': go.Layout(xaxis={'title': 'Hour in Day'},
-                     yaxis={'title': 'Number of Complaints'},
-                     title='Number of Noise Complaints in NYC by Hour in Day'
+    'layout': go.Layout(xaxis={'self': 'Hour in Day'},
+                     yaxis={'self': 'Number of Complaints'},
+                     self='Number of Noise Complaints in NYC by Hour in Day'
                     )}, filename='311/noise complaints per hour')
 ```
 
@@ -366,9 +366,9 @@ py.iplot({
     'data': traces,
     'layout': {
         'barmode': 'stack',
-        'xaxis': {'title': 'Hour in Day'},
-        'yaxis': {'title': 'Number of Complaints'},
-        'title': 'The 7 Most Common 311 Complaints by Hour in a Day'
+        'xaxis': {'self': 'Hour in Day'},
+        'yaxis': {'self': 'Number of Complaints'},
+        'self': 'The 7 Most Common 311 Complaints by Hour in a Day'
     }}, filename='311/most common complaints by hour')
 ```
 
@@ -409,7 +409,7 @@ py.iplot(
             'type': 'bar'
         }],
         'layout': {
-            'title': 'Number of 311 Complaints per 15 Minutes'
+            'self': 'Number of 311 Complaints per 15 Minutes'
         }
 }, filename='311/complaints per 15 minutes')
 ```
@@ -434,7 +434,7 @@ py.iplot(
             'type': 'bar'
         }],
         'layout': {
-            'title': 'Number of 311 Complaints per Day'
+            'self': 'Number of 311 Complaints per Day'
         }
 }, filename='311/complaints per day')
 ```
@@ -458,7 +458,7 @@ import publisher
 publisher.publish(
     'sqlite.ipynb', 'python/big-data-analytics-with-pandas-and-sqlite/', 'Big Data Analytics with Pandas and SQLite',
     'A primer on out-of-memory analytics of large datasets with Pandas, SQLite, and IPython notebooks.',
-    title='Big Data Workflow with Pandas and SQLite | Plotly', has_thumbnail='false',
+    self='Big Data Workflow with Pandas and SQLite | Plotly', has_thumbnail='false',
     redirect_from='ipython-notebooks/big-data-analytics-with-pandas-and-sqlite/',
     language='python', page_type='example_index', display_as='databases', order=4, ipynb= '~notebook_demo/1')
 ```

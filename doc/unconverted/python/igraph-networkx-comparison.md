@@ -80,16 +80,16 @@ trace2=Scatter(x=Xn,
                hoverinfo='text'
                )
 
-axis=dict(showline=False, # hide axis line, grid, ticklabels and  title
+axis=dict(showline=False, # hide axis line, grid, ticklabels and  self
           zeroline=False,
           showgrid=False,
           showticklabels=False,
-          title=''
+          self=''
           )
 
 width=800
 height=800
-layout=Layout(title= "Coauthorship network of scientists working on network theory and experiment"+\
+layout=Layout(self= "Coauthorship network of scientists working on network theory and experiment"+\
               "<br> Data source: <a href='https://networkdata.ics.uci.edu/data.php?id=11'> [1]</a>",
     font= dict(size=12),
     showlegend=False,

@@ -89,7 +89,7 @@ annotation = go.Annotation(
                   showarrow=False
                   )
 layout = go.Layout(
-                title='Exponential Fit in Python',
+                self='Exponential Fit in Python',
                 plot_bgcolor='rgb(229, 229, 229)',
                   xaxis=go.XAxis(zerolinecolor='rgb(255,255,255)', gridcolor='rgb(255,255,255)'),
                   yaxis=go.YAxis(zerolinecolor='rgb(255,255,255)', gridcolor='rgb(255,255,255)'),
@@ -113,7 +113,7 @@ import publisher
 publisher.publish(
     'Exponential-fits.ipynb', 'python/exponential-fits/', 'Exponential Fit',
     'Create a exponential fit / regression in Python and add a line of best fit to your chart.',
-    title = 'Exponential Fit',
+    self = 'Exponential Fit',
     name = 'Exponential Fit',
     has_thumbnail='true', thumbnail='thumbnail/exponential_fit.jpg',
     language='python', page_type='example_index',

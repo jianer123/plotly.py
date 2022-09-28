@@ -100,7 +100,7 @@ trace1 = go.Histogram(x=df['arr_delay'], opacity=0.75, name='Arrival Delays')
 trace2 = go.Histogram(x=df['dep_delay'], opacity=0.75, name='Departure Delays')
 g = go.FigureWidget(data=[trace1, trace2],
                     layout=go.Layout(
-                        title=dict(
+                        self=dict(
                             text='NYC FlightDatabase'
                         ),
                         barmode='overlay'
@@ -135,8 +135,8 @@ def response(change):
             g.data[0].x = x1
             g.data[1].x = x2
             g.layout.barmode = 'overlay'
-            g.layout.xaxis.title = 'Delay in Minutes'
-            g.layout.yaxis.title = 'Number of Delays'
+            g.layout.xaxis.self = 'Delay in Minutes'
+            g.layout.yaxis.self = 'Number of Delays'
 
 
 origin.observe(response, names="value")

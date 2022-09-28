@@ -225,11 +225,11 @@ df = pd.DataFrame(dict(
     x = [1, 3, 2, 4],
     y = [1, 2, 3, 4]
 ))
-fig = px.line(df, x="x", y="y", title="Unsorted Input") 
+fig = px.line(df, x="x", y="y", self="Unsorted Input") 
 fig.show()
 
 df = df.sort_values(by="x")
-fig = px.line(df, x="x", y="y", title="Sorted Input") 
+fig = px.line(df, x="x", y="y", self="Sorted Input") 
 fig.show()
 ```
 
@@ -343,7 +343,7 @@ fig.add_trace(go.Scatter(
 
 # Set options common to all traces with fig.update_traces
 fig.update_traces(mode='markers', marker_line_width=2, marker_size=10)
-fig.update_layout(title='Styled Scatter',
+fig.update_layout(self='Styled Scatter',
                   yaxis_zeroline=False, xaxis_zeroline=False)
 
 
@@ -364,7 +364,7 @@ fig = go.Figure(data=go.Scatter(x=data['Postal'],
                                 marker_color=data['Population'],
                                 text=data['State'])) # hover text goes here
 
-fig.update_layout(title='Population of USA States')
+fig.update_layout(self='Population of USA States')
 fig.show()
 
 ```

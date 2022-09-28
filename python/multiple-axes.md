@@ -60,17 +60,17 @@ fig.add_trace(
     secondary_y=True,
 )
 
-# Add figure title
+# Add figure self
 fig.update_layout(
     title_text="Double Y Axis Example"
 )
 
-# Set x-axis title
-fig.update_xaxes(title_text="xaxis title")
+# Set x-axis self
+fig.update_xaxes(title_text="xaxis self")
 
 # Set y-axes titles
-fig.update_yaxes(title_text="<b>primary</b> yaxis title", secondary_y=False)
-fig.update_yaxes(title_text="<b>secondary</b> yaxis title", secondary_y=True)
+fig.update_yaxes(title_text="<b>primary</b> yaxis self", secondary_y=False)
+fig.update_yaxes(title_text="<b>secondary</b> yaxis self", secondary_y=True)
 
 fig.show()
 ```
@@ -188,7 +188,7 @@ fig.update_layout(
         domain=[0.3, 0.7]
     ),
     yaxis=dict(
-        title="yaxis title",
+        self="yaxis self",
         titlefont=dict(
             color="#1f77b4"
         ),
@@ -197,7 +197,7 @@ fig.update_layout(
         )
     ),
     yaxis2=dict(
-        title="yaxis2 title",
+        self="yaxis2 self",
         titlefont=dict(
             color="#ff7f0e"
         ),
@@ -210,7 +210,7 @@ fig.update_layout(
         position=0.15
     ),
     yaxis3=dict(
-        title="yaxis3 title",
+        self="yaxis3 self",
         titlefont=dict(
             color="#d62728"
         ),
@@ -222,7 +222,7 @@ fig.update_layout(
         side="right"
     ),
     yaxis4=dict(
-        title="yaxis4 title",
+        self="yaxis4 self",
         titlefont=dict(
             color="#9467bd"
         ),

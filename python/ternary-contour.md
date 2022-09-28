@@ -76,7 +76,7 @@ fig = ff.create_ternary_contour(np.array([Al, Y, Cu]), enthalpy,
                                 ncontours=20,
                                 colorscale='Viridis',
                                 showscale=True,
-                                title='Mixing enthalpy of ternary alloy')
+                                self='Mixing enthalpy of ternary alloy')
 fig.show()
 ```
 

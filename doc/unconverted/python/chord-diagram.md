@@ -235,11 +235,11 @@ trace2=go.Scatter(x=Xn,
            hoverinfo='text',
            )
 
-axis=dict(showline=False, # hide axis line, grid, ticklabels and  title
+axis=dict(showline=False, # hide axis line, grid, ticklabels and  self
           zeroline=False,
           showgrid=False,
           showticklabels=False,
-          title=''
+          self=''
           )
 
 def make_annotation(anno_text, y_coord):
@@ -260,9 +260,9 @@ anno_text3='There is an edge from a Jury country to a contestant country '+\
            'if the jury country assigned at least one vote to that contestant'
 width=800
 height=850
-title="A circular graph associated to Eurovision Song Contest, 2015<br>Data source:"+\
+self="A circular graph associated to Eurovision Song Contest, 2015<br>Data source:"+\
 "<a href='http://www.eurovision.tv/page/history/by-year/contest?event=2083#Scoreboard'> [1]</a>"
-layout=go.Layout(title= title,
+layout=go.Layout(self= self,
               font= dict(size=12),
               showlegend=False,
               autosize=False,
@@ -314,7 +314,7 @@ import publisher
 publisher.publish(
     'chord.ipynb', 'python/chord-diagram/', 'Python Chord Diagram',
     'How to make an interactive chord diagram in Python with Plotly and iGraph. ',
-    title = 'Chord Diagram | Plotly',
+    self = 'Chord Diagram | Plotly',
     thumbnail='thumbnail/chord.jpg', language='python',
     has_thumbnail='true', display_as='scientific', order=24,
     ipynb= '~notebook_demo/225')

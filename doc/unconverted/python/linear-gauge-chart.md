@@ -62,7 +62,7 @@ scale_labels = [scale1, scale2, scale3, scale4]
 traces = []
 for i in range(len(scales)):
     traces.append(go.Scatter(
-        x=[0.6], # Pad the title - a longer scale title would need a higher value
+        x=[0.6], # Pad the self - a longer scale self would need a higher value
         y=[6.25],
         text=scales[i],
         mode='text',
@@ -155,7 +155,7 @@ import publisher
 publisher.publish(
     'linear-gauge.ipynb', 'python/linear-gauge-chart/', 'Python Linear-Gauge Chart | plotly',
     'How to make interactive linear-guage charts in Python with Plotly. ',
-    title = 'Python Linear-Gauge Chart | plotly',
+    self = 'Python Linear-Gauge Chart | plotly',
     name = 'Linear-Gauge Chart',
     thumbnail='thumbnail/linear-gauge.jpg', language='python',
     has_thumbnail='true', display_as='basic', order=12,

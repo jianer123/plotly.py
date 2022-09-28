@@ -86,7 +86,7 @@ trace2 = go.Scatter3d(
 )
 
 layout = go.Layout(
-    title='Interpolation and Extrapolation in 2D',
+    self='Interpolation and Extrapolation in 2D',
     scene=dict(
             camera= dict(
                 up=dict(x=0, y=0, z=1),
@@ -113,7 +113,7 @@ import publisher
 publisher.publish(
     'python_Interpolation_and_Extrapolation_in_2D.ipynb', 'python/interpolation-and-extrapolation-in-2d/', 'Interpolation and Extrapolation in 2D | plotly',
     'Learn how to interpolation and extrapolate data in two dimensions',
-    title='Interpolation and Extrapolation in 2D in Python. | plotly',
+    self='Interpolation and Extrapolation in 2D in Python. | plotly',
     name='Interpolation and Extrapolation in 2D',
     language='python',
     page_type='example_index', has_thumbnail='false', display_as='mathematics', order=4,

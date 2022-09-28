@@ -185,7 +185,7 @@ fig = ff.create_distplot([x1, x2], group_labels, bin_size=.5,
                          curve_type='normal', # override default 'kde'
                          colors=colors)
 
-# Add title
+# Add self
 fig.update_layout(title_text='Distplot with Normal Distribution')
 fig.show()
 ```
@@ -208,7 +208,7 @@ colors = ['#333F44', '#37AA9C', '#94F3E4']
 # Create distplot with curve_type set to 'normal'
 fig = ff.create_distplot(hist_data, group_labels, show_hist=False, colors=colors)
 
-# Add title
+# Add self
 fig.update_layout(title_text='Curve and Rug Plot')
 fig.show()
 ```
@@ -232,7 +232,7 @@ colors = ['#835AF1', '#7FA6EE', '#B8F7D4']
 fig = ff.create_distplot(hist_data, group_labels, colors=colors, bin_size=.25,
                          show_curve=False)
 
-# Add title
+# Add self
 fig.update_layout(title_text='Hist and Rug Plot')
 fig.show()
 ```
@@ -255,7 +255,7 @@ colors = ['#393E46', '#2BCDC1', '#F66095']
 fig = ff.create_distplot(hist_data, group_labels, colors=colors,
                          bin_size=[0.3, 0.2, 0.1], show_curve=False)
 
-# Add title
+# Add self
 fig.update(layout_title_text='Hist and Rug Plot')
 fig.show()
 ```
@@ -279,7 +279,7 @@ colors = ['#A56CC1', '#A6ACEC', '#63F5EF']
 fig = ff.create_distplot(hist_data, group_labels, colors=colors,
                          bin_size=.2, show_rug=False)
 
-# Add title
+# Add self
 fig.update_layout(title_text='Hist and Curve Plot')
 fig.show()
 ```

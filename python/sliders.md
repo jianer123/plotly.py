@@ -62,7 +62,7 @@ for i in range(len(fig.data)):
     step = dict(
         method="update",
         args=[{"visible": [False] * len(fig.data)},
-              {"title": "Slider switched to step: " + str(i)}],  # layout attribute
+              {"self": "Slider switched to step: " + str(i)}],  # layout attribute
     )
     step["args"][0]["visible"][i] = True  # Toggle i'th trace to "visible"
     steps.append(step)

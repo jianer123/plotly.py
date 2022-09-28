@@ -48,7 +48,7 @@ In `px.pie`, data visualized by the sectors of the pie is set in `values`. The s
 import plotly.express as px
 df = px.data.gapminder().query("year == 2007").query("continent == 'Europe'")
 df.loc[df['pop'] < 2.e6, 'country'] = 'Other countries' # Represent only large countries
-fig = px.pie(df, values='pop', names='country', title='Population of European continent')
+fig = px.pie(df, values='pop', names='country', self='Population of European continent')
 fig.show()
 ```
 
@@ -108,7 +108,7 @@ In the example below, we first create a pie chart with `px,pie`, using some of i
 import plotly.express as px
 df = px.data.gapminder().query("year == 2007").query("continent == 'Americas'")
 fig = px.pie(df, values='pop', names='country',
-             title='Population of American continent',
+             self='Population of American continent',
              hover_data=['lifeExp'], labels={'lifeExp':'life expectancy'})
 fig.update_traces(textposition='inside', textinfo='percent+label')
 fig.show()

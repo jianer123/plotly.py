@@ -88,7 +88,7 @@ annotation = go.Annotation(
 )
 
 layout = go.Layout(
-    title='Polynomial Fit in Python',
+    self='Polynomial Fit in Python',
     annotations=[annotation]
 )
 
@@ -143,7 +143,7 @@ trace2 = go.Scatter(
 )
 
 layout = go.Layout(
-    title='Interpolation and Extrapolation of Y From X',
+    self='Interpolation and Extrapolation of Y From X',
 )
 
 data2 = [trace1, trace2]
@@ -163,7 +163,7 @@ import publisher
 publisher.publish(
     'python_Interpolation_and_Extrapolation_in_1D.ipynb', 'python/interpolation-and-extrapolation-in-1d/', 'Interpolation and Extrapolation in 1D | plotly',
     'Learn how to interpolation and extrapolate data in one dimension',
-    title='Interpolation and Extrapolation in 1D in Python. | plotly',
+    self='Interpolation and Extrapolation in 1D in Python. | plotly',
     name='Interpolation and Extrapolation in 1D',
     language='python',
     page_type='example_index', has_thumbnail='false', display_as='mathematics', order=3,

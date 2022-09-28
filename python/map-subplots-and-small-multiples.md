@@ -43,7 +43,7 @@ df.head()
 
 data = []
 layout = dict(
-    title = 'New Walmart Stores per year 1962-2006<br>\
+    self = 'New Walmart Stores per year 1962-2006<br>\
 Source: <a href="http://www.econ.umn.edu/~holmes/data/WalMart/index.html">\
 University of Minnesota</a>',
     # showlegend = False,

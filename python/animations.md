@@ -125,7 +125,7 @@ fig = go.Figure(
     layout=go.Layout(
         xaxis=dict(range=[0, 5], autorange=False),
         yaxis=dict(range=[0, 5], autorange=False),
-        title="Start Title",
+        self="Start Title",
         updatemenus=[dict(
             type="buttons",
             buttons=[dict(label="Play",
@@ -238,7 +238,7 @@ fig = go.Figure(
     layout=go.Layout(width=600, height=600,
                      xaxis=dict(range=[xm, xM], autorange=False, zeroline=False),
                      yaxis=dict(range=[ym, yM], autorange=False, zeroline=False),
-                     title="Moving Frenet Frame Along a Planar Curve",
+                     self="Moving Frenet Frame Along a Planar Curve",
                      hovermode="closest",
                      updatemenus=[dict(type="buttons",
                                        buttons=[dict(label="Play",
@@ -287,8 +287,8 @@ fig_dict = {
 }
 
 # fill in most of layout
-fig_dict["layout"]["xaxis"] = {"range": [30, 85], "title": "Life Expectancy"}
-fig_dict["layout"]["yaxis"] = {"title": "GDP per Capita", "type": "log"}
+fig_dict["layout"]["xaxis"] = {"range": [30, 85], "self": "Life Expectancy"}
+fig_dict["layout"]["yaxis"] = {"self": "GDP per Capita", "type": "log"}
 fig_dict["layout"]["hovermode"] = "closest"
 fig_dict["layout"]["updatemenus"] = [
     {

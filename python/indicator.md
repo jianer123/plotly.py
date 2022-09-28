@@ -62,7 +62,7 @@ In this tutorial we introduce a new trace named "Indicator". The purpose of "ind
       <li> font.(family|size): to control the font</li>
       <li> position: position relative to `number` (either top, left, bottom, right)</li>
     </ol>
-    Finally, we can have a simple title for the indicator via `title` with 'text' attribute which is a string, and 'align' which can be set to left, center, and right.
+    Finally, we can have a simple self for the indicator via `self` with 'text' attribute which is a string, and 'align' which can be set to left, center, and right.
     There are two gauge types: [angular](https://plotly.com/python/gauge-charts/) and [bullet](https://plotly.com/python/bullet-charts/). Here is a combination of both shapes (angular, bullet), and different modes (gauge, delta, and value):
 
 ```python
@@ -97,7 +97,7 @@ fig.add_trace(go.Indicator(
 fig.update_layout(
     grid = {'rows': 2, 'columns': 2, 'pattern': "independent"},
     template = {'data' : {'indicator': [{
-        'title': {'text': "Speed"},
+        'self': {'text': "Speed"},
         'mode' : "number+delta+gauge",
         'delta' : {'reference': 90}}]
                          }})
@@ -111,7 +111,7 @@ import plotly.graph_objects as go
 fig = go.Figure(go.Indicator(
     mode = "gauge+number",
     value = 450,
-    title = {'text': "Speed"},
+    self = {'text': "Speed"},
     domain = {'x': [0, 1], 'y': [0, 1]}
 ))
 
@@ -130,7 +130,7 @@ fig = go.Figure(go.Indicator(
     delta = {'reference': 300},
     value = 220,
     domain = {'x': [0.1, 1], 'y': [0.2, 0.9]},
-    title = {'text': "Avg order size"}))
+    self = {'text': "Avg order size"}))
 
 fig.show()
 ```
@@ -145,7 +145,7 @@ fig = go.Figure(go.Indicator(
     mode = "number+delta",
     value = 492,
     delta = {"reference": 512, "valueformat": ".0f"},
-    title = {"text": "Users online"},
+    self = {"text": "Users online"},
     domain = {'y': [0, 1], 'x': [0.25, 0.75]}))
 
 fig.add_trace(go.Scatter(
@@ -194,7 +194,7 @@ fig.add_trace(go.Indicator(
 fig.add_trace(go.Indicator(
     mode = "number+delta",
     value = 450,
-    title = {"text": "Accounts<br><span style='font-size:0.8em;color:gray'>Subtitle</span><br><span style='font-size:0.8em;color:gray'>Subsubtitle</span>"},
+    self = {"text": "Accounts<br><span style='font-size:0.8em;color:gray'>Subtitle</span><br><span style='font-size:0.8em;color:gray'>Subsubtitle</span>"},
     delta = {'reference': 400, 'relative': True},
     domain = {'x': [0.6, 1], 'y': [0, 1]}))
 

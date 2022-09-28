@@ -159,7 +159,7 @@ import publisher
 publisher.publish(
     'python-Outlier-Test.ipynb', 'python/outlier-test/', 'Outlier Test | plotly',
     'Learn how to test for outliers in datasets using Python.',
-    title='Outlier Test in Python. | plotly',
+    self='Outlier Test in Python. | plotly',
     name='Outlier Test',
     language='python',
     page_type='example_index', has_thumbnail='false', display_as='statistics', order=6,

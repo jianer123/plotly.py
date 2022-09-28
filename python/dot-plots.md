@@ -67,7 +67,7 @@ df = pd.DataFrame(dict(school=schools*2, salary=men_salary + women_salary,
 
 # Use column names of df for the different parameters x, y, color, ...
 fig = px.scatter(df, x="salary", y="school", color="gender",
-                 title="Gender Earnings Disparity",
+                 self="Gender Earnings Disparity",
                  labels={"salary":"Annual Salary (in thousands)"} # customize axis label
                 )
 
@@ -98,7 +98,7 @@ fig.add_trace(go.Scatter(
     name="Men",
 ))
 
-fig.update_layout(title="Gender Earnings Disparity",
+fig.update_layout(self="Gender Earnings Disparity",
                   xaxis_title="Annual Salary (in thousands)",
                   yaxis_title="School")
 
@@ -139,7 +139,7 @@ fig.add_trace(go.Scatter(
 fig.update_traces(mode='markers', marker=dict(line_width=1, symbol='circle', size=16))
 
 fig.update_layout(
-    title="Votes cast for ten lowest voting age population in OECD countries",
+    self="Votes cast for ten lowest voting age population in OECD countries",
     xaxis=dict(
         showgrid=False,
         showline=True,

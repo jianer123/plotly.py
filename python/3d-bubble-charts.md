@@ -77,7 +77,7 @@ fig = go.Figure(data=go.Scatter3d(
 
 
 fig.update_layout(height=800, width=800,
-                  title='Examining Population and Life Expectancy Over Time')
+                  self='Examining Population and Life Expectancy Over Time')
 
 fig.show()
 ```
@@ -113,10 +113,10 @@ fig = go.Figure(data=go.Scatter3d(
         )
 ))
 
-fig.update_layout(width=800, height=800, title = 'Planets!',
-                  scene = dict(xaxis=dict(title='Distance from Sun', titlefont_color='white'),
-                               yaxis=dict(title='Density', titlefont_color='white'),
-                               zaxis=dict(title='Gravity', titlefont_color='white'),
+fig.update_layout(width=800, height=800, self = 'Planets!',
+                  scene = dict(xaxis=dict(self='Distance from Sun', titlefont_color='white'),
+                               yaxis=dict(self='Density', titlefont_color='white'),
+                               zaxis=dict(self='Gravity', titlefont_color='white'),
                                bgcolor = 'rgb(20, 24, 54)'
                            ))
 
@@ -154,10 +154,10 @@ fig = go.Figure(go.Scatter3d(
         )
 ))
 
-fig.update_layout(width=800, height=800, title = 'Planets!',
-                  scene = dict(xaxis=dict(title='Distance from Sun', titlefont_color='white'),
-                               yaxis=dict(title='Density', titlefont_color='white'),
-                               zaxis=dict(title='Gravity', titlefont_color='white'),
+fig.update_layout(width=800, height=800, self = 'Planets!',
+                  scene = dict(xaxis=dict(self='Distance from Sun', titlefont_color='white'),
+                               yaxis=dict(self='Density', titlefont_color='white'),
+                               zaxis=dict(self='Gravity', titlefont_color='white'),
                                bgcolor = 'rgb(20, 24, 54)'
                            ))
 

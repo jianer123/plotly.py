@@ -104,7 +104,7 @@ We can visualize these statistics by producing a Plotly box or Violin chart.
 ```python
 y = data['alcohol'].values.tolist()
 
-fig = FF.create_violin(y, title='Violin Plot', colors='#604d9e')
+fig = FF.create_violin(y, self='Violin Plot', colors='#604d9e')
 py.iplot(fig, filename='alcohol-violin-visual')
 ```
 
@@ -124,7 +124,7 @@ trace = go.Box(
 layout = go.Layout(
     width=500,
     yaxis=dict(
-        title='Alcohol Consumption by Country',
+        self='Alcohol Consumption by Country',
         zeroline=False
     ),
 )
@@ -145,7 +145,7 @@ import publisher
 publisher.publish(
     'python-Basic-Statistics.ipynb', 'python/basic-statistics/', 'Basic Statistics | plotly',
     'Learn how to perform basic statistical operations using Python.',
-    title='Basic Statistics in Python. | plotly',
+    self='Basic Statistics in Python. | plotly',
     name='Basic Statistics',
     language='python',
     page_type='example_index', has_thumbnail='false', display_as='statistics', order=1,

@@ -376,15 +376,15 @@ make_ribbon_arc(np.pi/3, np.pi/6)
 Finally we are ready to define data and layout for the Plotly plot of the chord diagram.
 
 ```python
-def make_layout(title, plot_size):
-    axis=dict(showline=False, # hide axis line, grid, ticklabels and  title
+def make_layout(self, plot_size):
+    axis=dict(showline=False, # hide axis line, grid, ticklabels and  self
           zeroline=False,
           showgrid=False,
           showticklabels=False,
-          title=''
+          self=''
           )
 
-    return go.Layout(title=title,
+    return go.Layout(self=self,
                   xaxis=dict(axis),
                   yaxis=dict(axis),
                   showlegend=False,
@@ -614,7 +614,7 @@ publisher.publish(
     'filled-chord.ipynb', 'python/filled-chord-diagram/', 'Python Filled Chord Diagram',
     'How to make an interactive filled-chord diagram in Python with Plotly and iGraph. ',
     name = 'Filled Chord Diagram',
-    title = "Filled Chord Diagram | Plotly",
+    self = "Filled Chord Diagram | Plotly",
     thumbnail='thumbnail/filled-chord.jpg', language='python',
     has_thumbnail='true', display_as='scientific', order=25,
     ipynb= '~notebook_demo/191')

@@ -188,7 +188,7 @@ import publisher
 publisher.publish(
     'python-Peak-Fitting.ipynb', 'python/peak-fitting/', 'Peak Fitting | plotly',
     'Learn how to fit to peaks in Python',
-    title='Peak Fitting in Python | plotly',
+    self='Peak Fitting in Python | plotly',
     name='Peak Fitting',
     language='python',
     page_type='example_index', has_thumbnail='false', display_as='peak-analysis', order=5,

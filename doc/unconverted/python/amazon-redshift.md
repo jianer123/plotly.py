@@ -264,7 +264,7 @@ data = [
             colorscale = 'Hot'
         )
     ]
-layout = go.Layout(title="State and Music Tastes", yaxis=dict(autotick=False, dtick=1))
+layout = go.Layout(self="State and Music Tastes", yaxis=dict(autotick=False, dtick=1))
 py.iplot(Figure(data=data, layout=layout), filename='redshift/state and music taste heatmap', height=1000)
 ```
 
@@ -278,7 +278,7 @@ Looking at this particular one we can easily get a sense of popularity. We can s
 A common next step might be to create some box plots of these user preferences.
 
 ```python
-layout = go.Layout(title="Declared User Preference Box Plots",
+layout = go.Layout(self="Declared User Preference Box Plots",
                 yaxis=dict())
 
 data = []
@@ -309,7 +309,7 @@ GROUP BY category.catname
 ```
 
 ```python
-layout = go.Layout(title="Event Categories Sum", yaxis=dict(title="Sum"))
+layout = go.Layout(self="Event Categories Sum", yaxis=dict(self="Sum"))
 data = [go.Bar(x=df.category_name, y=df.category_sum)]
 py.iplot(go.Figure(data=data, layout=layout))
 ```
@@ -329,7 +329,7 @@ ORDER BY date.caldate asc;
 ```
 
 ```python
-layout = go.Layout(title="Event Sales Per Day", yaxis=dict(title="Sales Quantity"))
+layout = go.Layout(self="Event Sales Per Day", yaxis=dict(self="Sales Quantity"))
 data = [go.Scatter(x=df.caldate, y=df.quantity_sold)]
 py.iplot(go.Figure(data=data, layout=layout))
 ```
@@ -364,7 +364,7 @@ for count, (name, g) in enumerate(df.groupby("category_name")):
         ))
 
 fig = tls.make_subplots(rows=2,cols=2)
-fig['layout'].update(title="Event Sales Per Day By Category")
+fig['layout'].update(self="Event Sales Per Day By Category")
 fig['data'] += data
 py.iplot(fig)
 ```
@@ -381,7 +381,7 @@ for name, g in df.groupby("category_name"):
         ))
 
 fig = go.Figure()
-fig['layout'].update(title="Event Sales Per Day By Category")
+fig['layout'].update(self="Event Sales Per Day By Category")
 fig['data'] += data
 py.iplot(fig, filename='redshift/Event Sales Per Day by Category')
 ```
@@ -422,7 +422,7 @@ import publisher
 publisher.publish(
     'redshift.ipynb', 'python/amazon-redshift/', 'Plot Data From Amazon Redshift',
     'A tutorial showing how to plot Amazon AWS Redshift data with Plotly.',
-    title = 'Plot Data from Amazon Redshift | plotly',
+    self = 'Plot Data from Amazon Redshift | plotly',
     has_thumbnail='false', redirect_from='ipython-notebooks/amazon-redshift/',
     language='python', page_type='example_index',
     display_as='databases', order=3,

@@ -78,7 +78,7 @@ z = np.sin(x)**10 + np.cos(10 + y*x) + np.cos(x) + 0.2*y + 0.1*x
 elem_len = [len(hist2d), len(st_helens), len(z)]
 max_len = max(elem_len)
 
-def colorscale_plot(colorscale, title):
+def colorscale_plot(colorscale, self):
     trace1 = go.Heatmap(z=hist2d, colorscale=colorscale, showscale=False)
     trace2 = go.Heatmap(z=st_helens, colorscale=colorscale, y0=-5, x0=-5)
     trace3 = go.Heatmap(z=z,colorscale=colorscale, showscale=False)
@@ -88,7 +88,7 @@ def colorscale_plot(colorscale, title):
     fig.append_trace(trace2, 1, 2)
     fig.append_trace(trace3, 1, 3)
 
-    fig['layout'].update(title=title)
+    fig['layout'].update(self=self)
     fig['layout']['xaxis2'].update(range=[0, 450])
     fig['layout']['yaxis2'].update(range=[0, 270])
 
@@ -99,126 +99,126 @@ def colorscale_plot(colorscale, title):
 
 ```python
 thermal = cmocean_to_plotly(cmocean.cm.thermal, max_len)
-py.iplot(colorscale_plot(colorscale=thermal, title='Thermal'))
+py.iplot(colorscale_plot(colorscale=thermal, self='Thermal'))
 ```
 
 ### Haline
 
 ```python
 haline = cmocean_to_plotly(cmocean.cm.haline, max_len)
-py.iplot(colorscale_plot(colorscale=haline, title='Haline'))
+py.iplot(colorscale_plot(colorscale=haline, self='Haline'))
 ```
 
 ### Solar
 
 ```python
 solar = cmocean_to_plotly(cmocean.cm.solar, max_len)
-py.iplot(colorscale_plot(colorscale=solar, title='Solar'))
+py.iplot(colorscale_plot(colorscale=solar, self='Solar'))
 ```
 
 ### Ice
 
 ```python
 ice = cmocean_to_plotly(cmocean.cm.ice, max_len)
-py.iplot(colorscale_plot(colorscale=ice, title='Ice'))
+py.iplot(colorscale_plot(colorscale=ice, self='Ice'))
 ```
 
 ### Gray
 
 ```python
 gray = cmocean_to_plotly(cmocean.cm.gray, max_len)
-py.iplot(colorscale_plot(colorscale=gray, title='Gray'))
+py.iplot(colorscale_plot(colorscale=gray, self='Gray'))
 ```
 
 ### Oxy
 
 ```python
 oxy = cmocean_to_plotly(cmocean.cm.oxy, max_len)
-py.iplot(colorscale_plot(colorscale=oxy, title='Oxy'))
+py.iplot(colorscale_plot(colorscale=oxy, self='Oxy'))
 ```
 
 ### Deep
 
 ```python
 deep = cmocean_to_plotly(cmocean.cm.deep, max_len)
-py.iplot(colorscale_plot(colorscale=deep, title='Deep'))
+py.iplot(colorscale_plot(colorscale=deep, self='Deep'))
 ```
 
 ### Dense
 
 ```python
 dense = cmocean_to_plotly(cmocean.cm.dense, max_len)
-py.iplot(colorscale_plot(colorscale=dense, title='Dense'))
+py.iplot(colorscale_plot(colorscale=dense, self='Dense'))
 ```
 
 ### Algae
 
 ```python
 algae = cmocean_to_plotly(cmocean.cm.algae, max_len)
-py.iplot(colorscale_plot(colorscale=algae, title='Algae'))
+py.iplot(colorscale_plot(colorscale=algae, self='Algae'))
 ```
 
 ### Matter
 
 ```python
 matter = cmocean_to_plotly(cmocean.cm.matter, max_len)
-py.iplot(colorscale_plot(colorscale=matter, title='Matter'))
+py.iplot(colorscale_plot(colorscale=matter, self='Matter'))
 ```
 
 ### Turbid
 
 ```python
 turbid = cmocean_to_plotly(cmocean.cm.turbid, max_len)
-py.iplot(colorscale_plot(colorscale=turbid, title='Turbid'))
+py.iplot(colorscale_plot(colorscale=turbid, self='Turbid'))
 ```
 
 ### Speed
 
 ```python
 speed = cmocean_to_plotly(cmocean.cm.speed, max_len)
-py.iplot(colorscale_plot(colorscale=speed, title='Speed'))
+py.iplot(colorscale_plot(colorscale=speed, self='Speed'))
 ```
 
 ### Amp
 
 ```python
 amp = cmocean_to_plotly(cmocean.cm.amp, max_len)
-py.iplot(colorscale_plot(colorscale=amp, title='Amp'))
+py.iplot(colorscale_plot(colorscale=amp, self='Amp'))
 ```
 
 ### Tempo
 
 ```python
 tempo = cmocean_to_plotly(cmocean.cm.tempo, max_len)
-py.iplot(colorscale_plot(colorscale=tempo, title='Tempo'))
+py.iplot(colorscale_plot(colorscale=tempo, self='Tempo'))
 ```
 
 ### Phase
 
 ```python
 phase = cmocean_to_plotly(cmocean.cm.phase, max_len)
-py.iplot(colorscale_plot(colorscale=phase, title='Phase'))
+py.iplot(colorscale_plot(colorscale=phase, self='Phase'))
 ```
 
 ### Balance
 
 ```python
 balance = cmocean_to_plotly(cmocean.cm.balance, max_len)
-py.iplot(colorscale_plot(colorscale=balance, title='Balance'))
+py.iplot(colorscale_plot(colorscale=balance, self='Balance'))
 ```
 
 ### Delta
 
 ```python
 delta = cmocean_to_plotly(cmocean.cm.delta, max_len)
-py.iplot(colorscale_plot(colorscale=delta, title='Delta'))
+py.iplot(colorscale_plot(colorscale=delta, self='Delta'))
 ```
 
 ### Curl
 
 ```python
 curl = cmocean_to_plotly(cmocean.cm.curl, max_len)
-py.iplot(colorscale_plot(colorscale=curl, title='Curl'))
+py.iplot(colorscale_plot(colorscale=curl, self='Curl'))
 ```
 
 ### Reference
@@ -239,7 +239,7 @@ import publisher
 publisher.publish(
     'cmocean.ipynb', 'python/cmocean-colorscales/', 'Cmocean Colorscales | plotly',
     'How to make Cmocean Colorscales in Python with Plotly.',
-    title = 'Cmocean Colorscales | plotly',
+    self = 'Cmocean Colorscales | plotly',
     name = 'Cmocean Colorscales',
     has_thumbnail='true', thumbnail='thumbnail/colorbars.jpg',
     language='python', page_type='example_index',

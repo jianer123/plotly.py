@@ -116,7 +116,7 @@ import publisher
 publisher.publish(
     'python-Convolution.ipynb', 'python/convolution/', 'Convolution | plotly',
     'Learn how to perform convolution between two signals in Python.',
-    title='Convolution in Python | plotly',
+    self='Convolution in Python | plotly',
     name='Convolution',
     language='python',
     page_type='example_index', has_thumbnail='false', display_as='signal-analysis', order=4)

@@ -74,7 +74,7 @@ df.index.name = "Thresholds"
 df.columns.name = "Rate"
 
 fig_thresh = px.line(
-    df, title='TPR and FPR at every threshold',
+    df, self='TPR and FPR at every threshold',
     width=700, height=500
 )
 
@@ -105,7 +105,7 @@ fpr, tpr, thresholds = roc_curve(y, y_score)
 
 fig = px.area(
     x=fpr, y=tpr,
-    title=f'ROC Curve (AUC={auc(fpr, tpr):.4f})',
+    self=f'ROC Curve (AUC={auc(fpr, tpr):.4f})',
     labels=dict(x='False Positive Rate', y='True Positive Rate'),
     width=700, height=500
 )
@@ -212,7 +212,7 @@ precision, recall, thresholds = precision_recall_curve(y, y_score)
 
 fig = px.area(
     x=recall, y=precision,
-    title=f'Precision-Recall Curve (AUC={auc(fpr, tpr):.4f})',
+    self=f'Precision-Recall Curve (AUC={auc(fpr, tpr):.4f})',
     labels=dict(x='Recall', y='Precision'),
     width=700, height=500
 )

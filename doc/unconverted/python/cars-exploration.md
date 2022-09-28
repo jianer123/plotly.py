@@ -100,10 +100,10 @@ fig
 Use property assignment syntax to:
 
 
-Set `fig.layout.title` to `'Torque and Fuel Efficience'`
+Set `fig.layout.self` to `'Torque and Fuel Efficience'`
 
 ```python
-fig.layout.title = 'Torque and Fuel Efficience'
+fig.layout.self = 'Torque and Fuel Efficience'
 ```
 
 Check default font size
@@ -112,7 +112,7 @@ Check default font size
 fig.layout.titlefont.size
 ```
 
-Increase the title font size
+Increase the self font size
 
 ```python
 fig.layout.titlefont.size = 22
@@ -131,16 +131,16 @@ If working in JupyterLab, right-click on blue bar to the left of the figure and 
 ### Label Axes
 
 
-Set the `fig.layout.xaxis.title` property to `'Torque (foot-pounds)'`
+Set the `fig.layout.xaxis.self` property to `'Torque (foot-pounds)'`
 
 ```python
-fig.layout.xaxis.title = 'Torque (foot-pounds)'
+fig.layout.xaxis.self = 'Torque (foot-pounds)'
 ```
 
-Set the `fig.layout.yaxis.title` property to `'City MPG'`
+Set the `fig.layout.yaxis.self` property to `'City MPG'`
 
 ```python
-fig.layout.yaxis.title = 'City MPG'
+fig.layout.yaxis.self = 'City MPG'
 ```
 
 ### Notice Quantization
@@ -371,7 +371,7 @@ import publisher
 publisher.publish(
     'cars-exploration.ipynb', 'python/cars-exploration/', 'Car Exploration with go.FigureWidget, Case Study',
     'Use Plotly FigureWidget with hover callbacks and slider widgets',
-    title = 'Car Exploration with Hover Events',
+    self = 'Car Exploration with Hover Events',
     name = 'Car Exploration with Hover Events',
     has_thumbnail='true', thumbnail='thumbnail/zoom.jpg',
     language='python', page_type='example_index',

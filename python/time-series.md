@@ -109,7 +109,7 @@ import plotly.express as px
 df = px.data.stocks()
 fig = px.line(df, x="date", y=df.columns,
               hover_data={"date": "|%B %d, %Y"},
-              title='custom tick labels')
+              self='custom tick labels')
 fig.update_xaxes(
     dtick="M1",
     tickformat="%b\n%Y")
@@ -127,7 +127,7 @@ import plotly.express as px
 df = px.data.stocks()
 fig = px.line(df, x="date", y=df.columns,
               hover_data={"date": "|%B %d, %Y"},
-              title='custom tick labels with ticklabelmode="period"')
+              self='custom tick labels with ticklabelmode="period"')
 fig.update_xaxes(
     dtick="M1",
     tickformat="%b\n%Y",
@@ -195,7 +195,7 @@ import pandas as pd
 
 df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv')
 
-fig = px.histogram(df, x="Date", y="AAPL.Close", histfunc="avg", title="Histogram on Date Axes")
+fig = px.histogram(df, x="Date", y="AAPL.Close", histfunc="avg", self="Histogram on Date Axes")
 fig.update_traces(xbins_size="M1")
 fig.update_xaxes(showgrid=True, ticklabelmode="period", dtick="M1", tickformat="%b\n%Y")
 fig.update_layout(bargap=0.1)
@@ -343,7 +343,7 @@ import pandas as pd
 
 df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv')
 
-fig = px.line(df, x='Date', y='AAPL.High', title='Time Series with Rangeslider')
+fig = px.line(df, x='Date', y='AAPL.High', self='Time Series with Rangeslider')
 
 fig.update_xaxes(rangeslider_visible=True)
 fig.show()
@@ -359,7 +359,7 @@ import pandas as pd
 
 df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv')
 
-fig = px.line(df, x='Date', y='AAPL.High', title='Time Series with Range Slider and Selectors')
+fig = px.line(df, x='Date', y='AAPL.High', self='Time Series with Range Slider and Selectors')
 
 fig.update_xaxes(
     rangeslider_visible=True,
@@ -421,7 +421,7 @@ import pandas as pd
 df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv')
 
 fig = px.scatter(df, x='Date', y='AAPL.High', range_x=['2015-12-01', '2016-01-15'],
-                 title="Default Display with Gaps")
+                 self="Default Display with Gaps")
 fig.show()
 ```
 
@@ -432,7 +432,7 @@ import pandas as pd
 df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv')
 
 fig = px.scatter(df, x='Date', y='AAPL.High', range_x=['2015-12-01', '2016-01-15'],
-                 title="Hide Weekend and Holiday Gaps with rangebreaks")
+                 self="Hide Weekend and Holiday Gaps with rangebreaks")
 fig.update_xaxes(
     rangebreaks=[
         dict(bounds=["sat", "mon"]), #hide weekends
@@ -460,7 +460,7 @@ df = pd.DataFrame(dict(
 ))
 
 fig = px.scatter(df, x="date", y="value",
-                 title="Default Display with Gaps")
+                 self="Default Display with Gaps")
 fig.show()
 ```
 
@@ -478,7 +478,7 @@ df = pd.DataFrame(dict(
 ))
 
 fig = px.scatter(df, x="date", y="value",
-                 title="Hide Non-Business Hour Gaps with rangebreaks")
+                 self="Hide Non-Business Hour Gaps with rangebreaks")
 fig.update_xaxes(
     rangebreaks=[
         dict(bounds=[17, 9], pattern="hour"), #hide hours outside of 9am-5pm

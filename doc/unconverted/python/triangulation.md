@@ -185,7 +185,7 @@ zerolinecolor="rgb(255, 255, 255)",
     )
 
 layout = go.Layout(
-         title='Moebius band triangulation',
+         self='Moebius band triangulation',
          width=800,
          height=800,
          scene=dict(
@@ -238,7 +238,7 @@ Plot the  surface with a modified layout:
 ```python
 data2=plotly_trisurf(x,y,z, tri.simplices, colormap=cm.cubehelix, plot_edges=None)
 fig2 = go.Figure(data=data2, layout=layout)
-fig2['layout'].update(dict(title='Triangulated surface',
+fig2['layout'].update(dict(self='Triangulated surface',
                           scene=dict(camera=dict(eye=dict(x=1.75,
                                                           y=-0.7,
                                                           z= 0.75)
@@ -299,7 +299,7 @@ Now we can get data for a Plotly plot of the graphical object read from the ply 
 ```python
 data3=plotly_trisurf(x,y,z, faces, colormap=cm.RdBu, plot_edges=None)
 
-title="Trisurf from a PLY file<br>"+\
+self="Trisurf from a PLY file<br>"+\
                 "Data Source:<a href='http://people.sc.fsu.edu/~jburkardt/data/ply/airplane.ply'> [1]</a>"
 
 noaxis=dict(showbackground=False,
@@ -307,11 +307,11 @@ noaxis=dict(showbackground=False,
             zeroline=False,
             showgrid=False,
             showticklabels=False,
-            title=''
+            self=''
           )
 
 fig3 = go.Figure(data=data3, layout=layout)
-fig3['layout'].update(dict(title=title,
+fig3['layout'].update(dict(self=self,
                            width=1000,
                            height=1000,
                            scene=dict(xaxis=noaxis,
@@ -350,7 +350,7 @@ import publisher
 publisher.publish(
     'triangulation.ipynb', 'python/surface-triangulation/', 'Surface Triangulation',
     'How to make Tri-Surf plots in Python with Plotly.',
-    title = 'Python Surface Triangulation | plotly',
+    self = 'Python Surface Triangulation | plotly',
     name = 'Surface Triangulation',
     has_thumbnail='true', thumbnail='thumbnail/trisurf.jpg',
     language='python',

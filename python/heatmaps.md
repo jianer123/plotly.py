@@ -141,7 +141,7 @@ fig.show()
 
 ### Display an xarray image with px.imshow
 
-[xarrays](http://xarray.pydata.org/en/stable/) are labeled arrays (with labeled axes and coordinates). If you pass an xarray image to `px.imshow`, its axes labels and coordinates will be used for axis titles. If you don't want this behavior, you can pass `img.values` which is a NumPy array if `img` is an xarray. Alternatively, you can override axis titles hover labels and colorbar title using the `labels` attribute, as above.
+[xarrays](http://xarray.pydata.org/en/stable/) are labeled arrays (with labeled axes and coordinates). If you pass an xarray image to `px.imshow`, its axes labels and coordinates will be used for axis titles. If you don't want this behavior, you can pass `img.values` which is a NumPy array if `img` is an xarray. Alternatively, you can override axis titles hover labels and colorbar self using the `labels` attribute, as above.
 
 ```python
 import plotly.express as px
@@ -257,7 +257,7 @@ fig = go.Figure(data=go.Heatmap(
         colorscale='Viridis'))
 
 fig.update_layout(
-    title='GitHub commits per day',
+    self='GitHub commits per day',
     xaxis_nticks=36)
 
 fig.show()

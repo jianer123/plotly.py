@@ -112,12 +112,12 @@ fig.add_trace(go.Carpet(
     y = [[1,2.2,3],[1.5,2.7,3.5],[1.7,2.9,3.7]],
     cheaterslope = 1,
     aaxis = dict(
-        title = "a",
+        self = "a",
         tickmode = "linear",
         dtick = 0.05
     ),
     baxis = dict(
-        title = "b",
+        self = "b",
         tickmode = "linear",
         dtick = 0.05
     )
@@ -176,7 +176,7 @@ fig.add_trace(go.Scattercarpet(
 ))
 
 fig.update_layout(
-    title = "scattercarpet extrapolation, clipping, and smoothing",
+    self = "scattercarpet extrapolation, clipping, and smoothing",
     hovermode = "closest"
 )
 

@@ -95,7 +95,7 @@ We will be producing a `scatterplot matrix` with all the columns of our data. Fo
 fig = FF.create_scatterplotmatrix(wind_data,
                                   height=1000,
                                   width=1000,
-                                  title='Wind Data - Scatterplot Matrix')
+                                  self='Wind Data - Scatterplot Matrix')
 py.iplot(fig, filename='wind-data-scatterplot-matrix')
 ```
 
@@ -110,7 +110,7 @@ import publisher
 publisher.publish(
     'python-Statistics-Charts.ipynb', 'python/statistics-charts/', 'Statistics Charts | plotly',
     'Learn how to plot statistical data with various charts using Python.',
-    title='Statistics Charts in Python. | plotly',
+    self='Statistics Charts in Python. | plotly',
     name='Statistics Charts',
     language='python',
     page_type='example_index', has_thumbnail='false', display_as='statistics', order=5,

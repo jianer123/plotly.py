@@ -143,7 +143,7 @@ import plotly.express as px
 df = px.data.tips()
 fig = px.box(df, x="time", y="total_bill", color="smoker",
              notched=True, # used notched shape
-             title="Box plot of total bill",
+             self="Box plot of total bill",
              hover_data=["day"] # add day column to hover data
             )
 fig.show()
@@ -404,7 +404,7 @@ fig.add_trace(go.Box(
 ))
 
 fig.update_layout(
-    xaxis=dict(title='normalized moisture', zeroline=False),
+    xaxis=dict(self='normalized moisture', zeroline=False),
     boxmode='group'
 )
 
@@ -481,7 +481,7 @@ for xd, yd, cls in zip(x_data, y_data, colors):
         )
 
 fig.update_layout(
-    title='Points Scored by the Top 9 Scoring NBA Players in 2012',
+    self='Points Scored by the Top 9 Scoring NBA Players in 2012',
     yaxis=dict(
         autorange=True,
         showgrid=True,

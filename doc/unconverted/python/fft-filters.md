@@ -110,7 +110,7 @@ trace1 = go.Scatter(
 )
 
 layout = go.Layout(
-    title='Low-Pass Filter',
+    self='Low-Pass Filter',
     showlegend=True
 )
 
@@ -156,7 +156,7 @@ trace1 = go.Scatter(
 )
 
 layout = go.Layout(
-    title='High-Pass Filter',
+    self='High-Pass Filter',
     showlegend=True
 )
 
@@ -205,7 +205,7 @@ trace1 = go.Scatter(
 )
 
 layout = go.Layout(
-    title='Band-Pass Filter',
+    self='Band-Pass Filter',
     showlegend=True
 )
 
@@ -225,7 +225,7 @@ import publisher
 publisher.publish(
     'python-FFT-Filters.ipynb', 'python/fft-filters/', 'FFT Filters | plotly',
     'Learn how filter out the frequencies of a signal by using low-pass, high-pass and band-pass FFT filtering.',
-    title='FFT Filters in Python | plotly',
+    self='FFT Filters in Python | plotly',
     name='FFT Filters',
     language='python',
     page_type='example_index', has_thumbnail='false', display_as='signal-analysis', order=2)

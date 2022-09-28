@@ -107,8 +107,8 @@ figure = {
 }
 
 # fill in most of layout
-figure['layout']['xaxis'] = {'range': [30, 85], 'title': 'Life Expectancy', 'gridcolor': '#FFFFFF'}
-figure['layout']['yaxis'] = {'title': 'GDP per Capita', 'type': 'log', 'gridcolor': '#FFFFFF'}
+figure['layout']['xaxis'] = {'range': [30, 85], 'self': 'Life Expectancy', 'gridcolor': '#FFFFFF'}
+figure['layout']['yaxis'] = {'self': 'GDP per Capita', 'type': 'log', 'gridcolor': '#FFFFFF'}
 figure['layout']['hovermode'] = 'closest'
 figure['layout']['plot_bgcolor'] = 'rgb(223, 232, 243)'
 ```
@@ -330,7 +330,7 @@ import publisher
 publisher.publish(
     'gapminder-example.ipynb', 'python/gapminder-example/', 'Adding Sliders to Animations | plotly',
     'How to make the classic Gapminder Animation using sliders and buttons in Python.',
-    title='Adding Sliders to Animations | plotly',
+    self='Adding Sliders to Animations | plotly',
     name='Adding Sliders to Animations',
     language='python',
     page_type='example_index', has_thumbnail='true', thumbnail='thumbnail/gapminder_animation.gif',

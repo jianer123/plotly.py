@@ -68,7 +68,7 @@ import plotly.express as px
 df = px.data.iris()
 fig = px.scatter(df, x="sepal_length", y="sepal_width", color="species", 
                  marginal_x="box", marginal_y="violin",
-                  title="Click on the legend items!")
+                  self="Click on the legend items!")
 fig.show()
 ```
 
@@ -89,7 +89,7 @@ Try hovering over the rug plot points to identify individual country values in t
 import plotly.express as px
 df = px.data.gapminder().query("year == 2007")
 fig = px.histogram(df, x="lifeExp", color="continent", marginal="rug", hover_name="country",
-                  title="Hover over the rug plot!")
+                  self="Hover over the rug plot!")
 fig.show()
 ```
 

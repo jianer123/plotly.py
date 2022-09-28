@@ -129,7 +129,7 @@ fig = go.Figure(go.Scatter(
 ))
 
 fig.update_layout(
-    title = 'Time Series with Custom Date-Time Format',
+    self = 'Time Series with Custom Date-Time Format',
     xaxis_tickformat = '%d %B (%a)<br>%Y'
 )
 

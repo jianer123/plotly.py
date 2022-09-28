@@ -128,7 +128,7 @@ import plotly.express as px
 
 df = px.data.gapminder(year=2007)
 fig = px.bar(df, x='continent', y='pop', color="lifeExp", text='country', 
-             title="Default behavior: some text is tiny")
+             self="Default behavior: some text is tiny")
 fig.update_traces(textposition='inside')
 fig.show()
 ```
@@ -140,7 +140,7 @@ import plotly.express as px
 
 df = px.data.gapminder(year=2007)
 fig = px.bar(df, x='continent', y='pop', color="lifeExp", text='country', 
-             title="Uniform Text: min size is 8, hidden if can't fit")
+             self="Uniform Text: min size is 8, hidden if can't fit")
 fig.update_traces(textposition='inside')
 fig.update_layout(uniformtext_minsize=8, uniformtext_mode='hide')
 fig.show()
@@ -416,7 +416,7 @@ Try panning or zooming in the following figure:
 ```python
 import plotly.express as px
 
-fig = px.scatter(x=[1, 2, 3], y=[1, 2, 3], title="Try panning or zooming!")
+fig = px.scatter(x=[1, 2, 3], y=[1, 2, 3], self="Try panning or zooming!")
 
 fig.add_annotation(text="Absolutely-positioned annotation",
                   xref="paper", yref="paper",

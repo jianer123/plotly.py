@@ -199,7 +199,7 @@ data = [dict(
 )]
 
 layout = dict(
-    title = '<b>Gapminder</b><br>2007 Average GDP Per Cap & Life Exp. by Continent',
+    self = '<b>Gapminder</b><br>2007 Average GDP Per Cap & Life Exp. by Continent',
     yaxis = dict(
         type = 'log'
     )

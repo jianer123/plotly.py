@@ -78,7 +78,7 @@ import publisher
 publisher.publish(
     'user-g.ipynb', 'python/userguide//', 'Getting Started Plotly for Python',
     'Getting Started with Plotly for Python',
-    title = 'Getting Started Plotly for Python',
+    self = 'Getting Started Plotly for Python',
     thumbnail='', language='python',
     layout='user-guide', has_thumbnail='false')
 ```

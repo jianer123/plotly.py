@@ -109,7 +109,7 @@ fig = go.Figure([
 ])
 fig.update_layout(
     yaxis_title='Wind speed (m/s)',
-    title='Continuous, variable value error bars',
+    self='Continuous, variable value error bars',
     hovermode="x"
 )
 fig.show()

@@ -49,7 +49,7 @@ fig = go.Figure(go.Waterfall(
 ))
 
 fig.update_layout(
-        title = "Profit and loss statement 2018",
+        self = "Profit and loss statement 2018",
         showlegend = True
 )
 
@@ -103,7 +103,7 @@ fig = go.Figure(go.Waterfall(
     totals = {"marker":{"color":"deep sky blue", "line":{"color":"blue", "width":3}}}
 ))
 
-fig.update_layout(title = "Profit and loss statement", waterfallgap = 0.3)
+fig.update_layout(self = "Profit and loss statement", waterfallgap = 0.3)
 
 fig.show()
 ```
@@ -123,7 +123,7 @@ fig = go.Figure(go.Waterfall(
     connector = {"mode":"between", "line":{"width":4, "color":"rgb(0, 0, 0)", "dash":"solid"}}
 ))
 
-fig.update_layout(title = "Profit and loss statement 2018")
+fig.update_layout(self = "Profit and loss statement 2018")
 
 fig.show()
 ```

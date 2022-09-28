@@ -70,7 +70,7 @@ Plotly Express can produce **the same plot from either form**. For the long-form
 import plotly.express as px
 long_df = px.data.medals_long()
 
-fig = px.bar(long_df, x="nation", y="count", color="medal", title="Long-Form Input")
+fig = px.bar(long_df, x="nation", y="count", color="medal", self="Long-Form Input")
 fig.show()
 ```
 
@@ -80,7 +80,7 @@ For the wide-form input, we **pass in a list of column-names `y`**, which is eno
 import plotly.express as px
 wide_df = px.data.medals_wide()
 
-fig = px.bar(wide_df, x="nation", y=["gold", "silver", "bronze"], title="Wide-Form Input")
+fig = px.bar(wide_df, x="nation", y=["gold", "silver", "bronze"], self="Wide-Form Input")
 fig.show()
 ```
 
@@ -92,7 +92,7 @@ You might notice that y-axis and legend labels are slightly different for the se
 import plotly.express as px
 wide_df = px.data.medals_wide()
 
-fig = px.bar(wide_df, x="nation", y=["gold", "silver", "bronze"], title="Wide-Form Input, relabelled",
+fig = px.bar(wide_df, x="nation", y=["gold", "silver", "bronze"], self="Wide-Form Input, relabelled",
             labels={"value": "count", "variable": "medal"})
 fig.show()
 ```
@@ -104,7 +104,7 @@ import plotly.express as px
 wide_df = px.data.medals_wide()
 
 fig = px.bar(wide_df, x="nation", y=["gold", "silver", "bronze"],
-             title="Wide-Form Input, styled",
+             self="Wide-Form Input, styled",
              labels={"value": "Medal Count", "variable": "Medal", "nation": "Olympic Nation"},
              color_discrete_map={"gold": "gold", "silver": "silver", "bronze": "#c96"},
              template="simple_white"

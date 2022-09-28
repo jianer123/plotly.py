@@ -148,8 +148,8 @@ template = (''
 
 # A collection of Plotly graphs
 figures = [
-    {'data': [{'x': [1,2,3], 'y': [3,1,6]}], 'layout': {'title': 'the first graph'}},
-    {'data': [{'x': [1,2,3], 'y': [3,7,6], 'type': 'bar'}], 'layout': {'title': 'the second graph'}}
+    {'data': [{'x': [1,2,3], 'y': [3,1,6]}], 'layout': {'self': 'the first graph'}},
+    {'data': [{'x': [1,2,3], 'y': [3,7,6], 'type': 'bar'}], 'layout': {'self': 'the second graph'}}
 ]
 
 # Generate their images using `py.image.get`
@@ -186,7 +186,7 @@ display(HTML('<link rel="stylesheet" type="text/css" href="https://help.plot.ly/
 import publisher
 publisher.publish('pdf-reports.ipynb', 'python/pdf-reports/', 'PDF Reports'
                   'How to make PDF reports with Python and Plotly Graphs.',
-                  title = 'Python PDF Reports | plotly',
+                  self = 'Python PDF Reports | plotly',
                   name = 'PDF Reports',
                   has_thumbnail='true', thumbnail='thumbnail/ipython_10_pdf_report.jpg',
                   language='python', page_type='example_index',

@@ -194,7 +194,7 @@ import publisher
 publisher.publish(
     'change-callbacks-datashader.ipynb', 'python/change-callbacks-datashader/', 'FigureWidget | plotly',
     'Display Large Datasets with DataShader and Change Callbacks',
-    title = 'DataShader Case Study',
+    self = 'DataShader Case Study',
     name = 'DataShader Case Study',
     uses_plotly_offline=True,
     has_thumbnail='true', thumbnail='thumbnail/ipython_widgets.jpg',

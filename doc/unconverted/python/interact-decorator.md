@@ -86,7 +86,7 @@ import publisher
 publisher.publish(
     'Interact.ipynb', 'python/interact-decorator/', 'Use the Interact decorator with go.FigureWidget',
     'Use the Interact decorator with go.FigureWidget',
-    title = 'Use Interact decorator with FigureWidget',
+    self = 'Use Interact decorator with FigureWidget',
     name = 'Use Interact decorator with FigureWidget',
     has_thumbnail='true', thumbnail='thumbnail/zoom.jpg',
     language='python', page_type='example_index',

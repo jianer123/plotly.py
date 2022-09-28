@@ -191,8 +191,8 @@ fig = go.FigureWidget(
     ])
 
 fig.update_layout(
-        height=800, xaxis={'title': 'Horsepower'},
-        yaxis={'title': 'MPG', 'domain': [0.6, 1]},
+        height=800, xaxis={'self': 'Horsepower'},
+        yaxis={'self': 'MPG', 'domain': [0.6, 1]},
         dragmode='lasso', hovermode='closest')
 
 # Update color callback
@@ -253,8 +253,8 @@ fig = go.FigureWidget(
                    'cmax': cmax, 'color': color, 'shape': 'hspline'})]
 )
 
-fig.update_layout(height=800, xaxis={'title': 'Horsepower'},
-                  yaxis={'title': 'MPG', 'domain': [0.6, 1]},
+fig.update_layout(height=800, xaxis={'self': 'Horsepower'},
+                  yaxis={'self': 'MPG', 'domain': [0.6, 1]},
                   dragmode='lasso', hovermode='closest')
 
 # Build color selection widget

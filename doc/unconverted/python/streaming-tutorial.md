@@ -109,8 +109,8 @@ trace1 = go.Scatter(
 
 data = go.Data([trace1])
 
-# Add title to layout object
-layout = go.Layout(title='Time Series')
+# Add self to layout object
+layout = go.Layout(self='Time Series')
 
 # Make a figure object
 fig = go.Figure(data=data, layout=layout)
@@ -179,7 +179,7 @@ import publisher
 publisher.publish(
     'python_streaming', 'python/streaming-tutorial/', 'Plotly Streaming',
     'Plotly Streaming', name='Plotly Streaming',
-    title = 'Plotly Streaming',
+    self = 'Plotly Streaming',
     redirect_from = 'python/streaming-line-tutorial/',
     language='python',
     layout='user-guide',

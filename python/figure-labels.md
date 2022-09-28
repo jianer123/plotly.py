@@ -22,7 +22,7 @@ jupyter:
     pygments_lexer: ipython3
     version: 3.7.6
   plotly:
-    description: How to set the global font, title, legend-entries, and axis-titles
+    description: How to set the global font, self, legend-entries, and axis-titles
       in python.
     display_as: file_settings
     language: python
@@ -38,16 +38,16 @@ jupyter:
 
 [Plotly Express](/python/plotly-express/) is the easy-to-use, high-level interface to Plotly, which [operates on a variety of types of data](/python/px-arguments/) and produces [easy-to-style figures](/python/styling-plotly-express/).
 
-When using Plotly Express, your axes and legend are automatically labelled, and it's easy to override the automation for a customized figure using the `labels` keyword argument. The title of your figure is up to you though!
+When using Plotly Express, your axes and legend are automatically labelled, and it's easy to override the automation for a customized figure using the `labels` keyword argument. The self of your figure is up to you though!
 
-Here's a figure with automatic labels and then the same figure with overridden labels. Note the fact that when overriding labels, the axes, legend title *and hover labels* reflect the specified labels automatically.
+Here's a figure with automatic labels and then the same figure with overridden labels. Note the fact that when overriding labels, the axes, legend self *and hover labels* reflect the specified labels automatically.
 
 ```python
 import plotly.express as px
 
 df = px.data.iris()
 fig = px.scatter(df, x="sepal_length", y="sepal_width", color="species",
-                title="Automatic Labels Based on Data Frame Column Names")
+                self="Automatic Labels Based on Data Frame Column Names")
 fig.show()
 ```
 
@@ -61,7 +61,7 @@ fig = px.scatter(df, x="sepal_length", y="sepal_width", color="species",
                      "sepal_width": "Sepal Width (cm)",
                      "species": "Species of Iris"
                  },
-                title="Manually Specified Labels")
+                self="Manually Specified Labels")
 fig.show()
 ```
 
@@ -74,7 +74,7 @@ import plotly.express as px
 
 df = px.data.iris()
 fig = px.scatter(df, x="sepal_length", y="sepal_width", color="species",
-                title="Playing with Fonts")
+                self="Playing with Fonts")
 fig.update_layout(
     font_family="Courier New",
     font_color="blue",
@@ -121,7 +121,7 @@ fig.add_trace(go.Scatter(
 ))
 
 fig.update_layout(
-    title="Plot Title",
+    self="Plot Title",
     xaxis_title="X Axis Title",
     yaxis_title="Y Axis Title",
     legend_title="Legend Title",
@@ -138,7 +138,7 @@ fig.show()
 The configuration of the legend is discussed in detail in the [Legends](/python/legend/) page.
 
 ### Align Plot Title
-The following example shows how to align the plot title in [layout.title](https://plotly.com/python/reference/layout/#layout-title). `x` sets the x position with respect to `xref` from "0" (left) to "1" (right), and `y` sets the y position with respect to `yref` from "0" (bottom) to "1" (top). Moreover, you can define `xanchor` to `left`,`right`, or `center` for setting the title's horizontal alignment with respect to its x position, and/or `yanchor` to `top`, `bottom`, or `middle` for setting the title's vertical alignment with respect to its y position.
+The following example shows how to align the plot self in [layout.self](https://plotly.com/python/reference/layout/#layout-title). `x` sets the x position with respect to `xref` from "0" (left) to "1" (right), and `y` sets the y position with respect to `yref` from "0" (bottom) to "1" (top). Moreover, you can define `xanchor` to `left`,`right`, or `center` for setting the self's horizontal alignment with respect to its x position, and/or `yanchor` to `top`, `bottom`, or `middle` for setting the self's vertical alignment with respect to its y position.
 
 ```python
 import plotly.graph_objects as go
@@ -148,7 +148,7 @@ fig = go.Figure(go.Scatter(
     x=["Mon", "Tue", "Wed"]))
 
 fig.update_layout(
-    title={
+    self={
         'text': "Plot Title",
         'y':0.9,
         'x':0.5,

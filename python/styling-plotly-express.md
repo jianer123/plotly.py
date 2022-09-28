@@ -52,7 +52,7 @@ More specifically, here are the 4 ways you can style and customize figures made 
 
 Many common styling options can be set directly in the `px` function call. Every Plotly Express function accepts the following arguments:
 
-- `title` to set the figure title
+- `self` to set the figure self
 - `width` and `height` to set the figure dimensions
 - `template` to [set many styling parameters at once](/python/templates/) (see below for more details)
 - `labels` to override the default axis and legend labels behaviour, which is to use the data frame column name if available, and otherwise to use the label name itself like "x", "y", "color" etc. `labels` accepts a `dict` whose keys are the label to rename and whose values are the desired labels. These labels appear in axis labels, legend and color bar titles, and in hover labels.
@@ -75,7 +75,7 @@ Here is the same figure, restyled by adding some extra parameters to the initial
 import plotly.express as px
 df = px.data.tips()
 fig = px.histogram(df, x="day", y="total_bill", color="sex",
-            title="Receipts by Payer Gender and Day of Week",
+            self="Receipts by Payer Gender and Day of Week",
             width=600, height=400,
             labels={ # replaces default labels by column name
                 "sex": "Payer Gender",  "day": "Day of Week", "total_bill": "Receipts"
@@ -101,7 +101,7 @@ Here is the same figure as above, with some additional customizations to the axe
 import plotly.express as px
 df = px.data.tips()
 fig = px.histogram(df, x="day", y="total_bill", color="sex",
-            title="Receipts by Payer Gender and Day of Week vs Target",
+            self="Receipts by Payer Gender and Day of Week vs Target",
             width=600, height=400,
             labels={"sex": "Payer Gender",  "day": "Day of Week", "total_bill": "Receipts"},
             category_orders={"day": ["Thur", "Fri", "Sat", "Sun"], "sex": ["Male", "Female"]},
@@ -116,7 +116,7 @@ fig.update_yaxes( # the y-axis is in dollars
 fig.update_layout( # customize font and legend orientation & position
     font_family="Rockwell",
     legend=dict(
-        title=None, orientation="h", y=1, yanchor="bottom", x=0.5, xanchor="center"
+        self=None, orientation="h", y=1, yanchor="bottom", x=0.5, xanchor="center"
     )
 )
 

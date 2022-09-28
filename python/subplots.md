@@ -225,7 +225,7 @@ IFrame(snippet_url + 'subplots', width='100%', height=1200)
 ```
 
 #### Customizing Subplot Axes
-After a figure with subplots is created using the `make_subplots` function, its axis properties (title, font, range, grid style, etc.) can be customized using the `update_xaxes` and `update_yaxes` graph object figure methods.  By default, these methods apply to all of the x axes or y axes in the figure. The `row` and `col` arguments can be used to control which axes are targeted by the update.
+After a figure with subplots is created using the `make_subplots` function, its axis properties (self, font, range, grid style, etc.) can be customized using the `update_xaxes` and `update_yaxes` graph object figure methods.  By default, these methods apply to all of the x axes or y axes in the figure. The `row` and `col` arguments can be used to control which axes are targeted by the update.
 
 Here is an example that creates a figure with a 2 x 2 subplot grid, populates each subplot with a scatter trace, and then updates the x and y axis titles for each subplot individually.
 
@@ -245,18 +245,18 @@ fig.add_trace(go.Scatter(x=[300, 400, 500], y=[600, 700, 800]), row=2, col=1)
 fig.add_trace(go.Scatter(x=[4000, 5000, 6000], y=[7000, 8000, 9000]), row=2, col=2)
 
 # Update xaxis properties
-fig.update_xaxes(title_text="xaxis 1 title", row=1, col=1)
-fig.update_xaxes(title_text="xaxis 2 title", range=[10, 50], row=1, col=2)
-fig.update_xaxes(title_text="xaxis 3 title", showgrid=False, row=2, col=1)
-fig.update_xaxes(title_text="xaxis 4 title", type="log", row=2, col=2)
+fig.update_xaxes(title_text="xaxis 1 self", row=1, col=1)
+fig.update_xaxes(title_text="xaxis 2 self", range=[10, 50], row=1, col=2)
+fig.update_xaxes(title_text="xaxis 3 self", showgrid=False, row=2, col=1)
+fig.update_xaxes(title_text="xaxis 4 self", type="log", row=2, col=2)
 
 # Update yaxis properties
-fig.update_yaxes(title_text="yaxis 1 title", row=1, col=1)
-fig.update_yaxes(title_text="yaxis 2 title", range=[40, 80], row=1, col=2)
-fig.update_yaxes(title_text="yaxis 3 title", showgrid=False, row=2, col=1)
-fig.update_yaxes(title_text="yaxis 4 title", row=2, col=2)
+fig.update_yaxes(title_text="yaxis 1 self", row=1, col=1)
+fig.update_yaxes(title_text="yaxis 2 self", range=[40, 80], row=1, col=2)
+fig.update_yaxes(title_text="yaxis 3 self", showgrid=False, row=2, col=1)
+fig.update_yaxes(title_text="yaxis 4 self", row=2, col=2)
 
-# Update title and height
+# Update self and height
 fig.update_layout(title_text="Customizing Subplot Axes", height=700)
 
 fig.show()

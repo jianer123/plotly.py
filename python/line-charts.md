@@ -44,7 +44,7 @@ For more examples of line plots, see the [line and scatter notebook](https://plo
 import plotly.express as px
 
 df = px.data.gapminder().query("country=='Canada'")
-fig = px.line(df, x="year", y="lifeExp", title='Life expectancy in Canada')
+fig = px.line(df, x="year", y="lifeExp", self='Life expectancy in Canada')
 fig.show()
 ```
 
@@ -85,11 +85,11 @@ df = pd.DataFrame(dict(
     x = [1, 3, 2, 4],
     y = [1, 2, 3, 4]
 ))
-fig = px.line(df, x="x", y="y", title="Unsorted Input") 
+fig = px.line(df, x="x", y="y", self="Unsorted Input") 
 fig.show()
 
 df = df.sort_values(by="x")
-fig = px.line(df, x="x", y="y", title="Sorted Input") 
+fig = px.line(df, x="x", y="y", self="Sorted Input") 
 fig.show()
 ```
 
@@ -249,7 +249,7 @@ fig.add_trace(go.Scatter(x=month, y=low_2000, name='Low 2000',
                          line=dict(color='royalblue', width=4, dash='dot')))
 
 # Edit the layout
-fig.update_layout(title='Average High and Low Temperatures in New York',
+fig.update_layout(self='Average High and Low Temperatures in New York',
                    xaxis_title='Month',
                    yaxis_title='Temperature (degrees F)')
 
@@ -320,7 +320,7 @@ fig.show()
 import plotly.graph_objects as go
 import numpy as np
 
-title = 'Main Source for News'
+self = 'Main Source for News'
 labels = ['Television', 'Newspaper', 'Internet', 'Radio']
 colors = ['rgb(67,67,67)', 'rgb(115,115,115)', 'rgb(49,130,189)', 'rgb(189,189,189)']
 

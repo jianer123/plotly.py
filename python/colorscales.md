@@ -60,7 +60,7 @@ For example, in the `tips` dataset, the `size` column contains numbers:
 import plotly.express as px
 df = px.data.tips()
 fig = px.scatter(df, x="total_bill", y="tip", color="size",
-                 title="Numeric 'size' values mean continuous color")
+                 self="Numeric 'size' values mean continuous color")
 
 fig.show()
 ```
@@ -72,7 +72,7 @@ import plotly.express as px
 df = px.data.tips()
 df["size"] = df["size"].astype(str)
 fig = px.scatter(df, x="total_bill", y="tip", color="size",
-                 title="String 'size' values mean discrete colors")
+                 self="String 'size' values mean discrete colors")
 
 fig.show()
 ```
@@ -85,7 +85,7 @@ df = px.data.tips()
 df["size"] = df["size"].astype(str)
 df["size"] = df["size"].astype(float)
 fig = px.scatter(df, x="total_bill", y="tip", color="size",
-                 title="Numeric 'size' values mean continuous color")
+                 self="Numeric 'size' values mean continuous color")
 
 fig.show()
 ```
@@ -216,7 +216,7 @@ avg_lifeExp = (df['lifeExp']*df['pop']).sum()/df['pop'].sum()
 fig = px.choropleth(df, locations="iso_alpha", color="lifeExp",
                     color_continuous_scale=px.colors.diverging.BrBG,
                     color_continuous_midpoint=avg_lifeExp,
-                    title="World Average Life Expectancy in 2007 in years was %.1f" % avg_lifeExp)
+                    self="World Average Life Expectancy in 2007 in years was %.1f" % avg_lifeExp)
 fig.show()
 ```
 
@@ -227,22 +227,22 @@ Plotly Express binds all traces to [`layout.coloraxis`](/python/reference/layout
 ```python
 import plotly.express as px
 df = px.data.tips()
-fig = px.density_heatmap(df, x="total_bill", y="tip", title="No color bar on this density plot")
+fig = px.density_heatmap(df, x="total_bill", y="tip", self="No color bar on this density plot")
 
 fig.update_layout(coloraxis_showscale=False)
 
 fig.show()
 ```
 
-You can also configure the title, size, placement and tick marks and labels on a color bar:
+You can also configure the self, size, placement and tick marks and labels on a color bar:
 
 ```python
 import plotly.express as px
 df = px.data.tips()
-fig = px.density_heatmap(df, x="total_bill", y="tip", title="Customized color bar on this density plot")
+fig = px.density_heatmap(df, x="total_bill", y="tip", self="Customized color bar on this density plot")
 
 fig.update_layout(coloraxis_colorbar=dict(
-    title="Number of Bills per Cell",
+    self="Number of Bills per Cell",
     thicknessmode="pixels", thickness=50,
     lenmode="pixels", len=200,
     yanchor="top", y=1,
@@ -267,7 +267,7 @@ fig = px.parallel_coordinates(df, dimensions=["sepal_length", "sepal_width", "pe
                                                      (0.66, "blue"),  (1.00, "blue")])
 
 fig.update_layout(coloraxis_colorbar=dict(
-    title="Species",
+    self="Species",
     tickvals=[1,2,3],
     ticktext=["setosa","versicolor","virginica"],
     lenmode="pixels", len=100,
@@ -287,7 +287,7 @@ df = px.data.gapminder().query("year == 2007")
 fig = px.scatter(df, y="lifeExp", x="pop", color=np.log10(df["pop"]), hover_name="country", log_x=True)
 
 fig.update_layout(coloraxis_colorbar=dict(
-    title="Population",
+    self="Population",
     tickvals=[6,7,8,9],
     ticktext=["1M", "10M", "100M", "1B"],
 ))
@@ -367,7 +367,7 @@ fig.add_trace(go.Scatter(
         cmin=0,
         color=values,
         colorbar=dict(
-            title="Colorbar"
+            self="Colorbar"
         ),
         colorscale="Viridis"
     ),
@@ -506,7 +506,7 @@ fig = go.Figure()
 fig.add_trace(go.Heatmap(
     z=dataset["z"],
     colorbar=dict(
-        title="Surface Heat",
+        self="Surface Heat",
         titleside="top",
         tickmode="array",
         tickvals=[2, 50, 100],

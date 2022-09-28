@@ -50,7 +50,7 @@ fig = go.Figure(go.Indicator(
     mode = "gauge+number",
     value = 270,
     domain = {'x': [0, 1], 'y': [0, 1]},
-    title = {'text': "Speed"}))
+    self = {'text': "Speed"}))
 
 fig.show()
 ```
@@ -66,7 +66,7 @@ fig = go.Figure(go.Indicator(
     domain = {'x': [0, 1], 'y': [0, 1]},
     value = 450,
     mode = "gauge+number+delta",
-    title = {'text': "Speed"},
+    self = {'text': "Speed"},
     delta = {'reference': 380},
     gauge = {'axis': {'range': [None, 500]},
              'steps' : [
@@ -87,7 +87,7 @@ fig = go.Figure(go.Indicator(
     mode = "gauge+number+delta",
     value = 420,
     domain = {'x': [0, 1], 'y': [0, 1]},
-    title = {'text': "Speed", 'font': {'size': 24}},
+    self = {'text': "Speed", 'font': {'size': 24}},
     delta = {'reference': 400, 'increasing': {'color': "RebeccaPurple"}},
     gauge = {
         'axis': {'range': [None, 500], 'tickwidth': 1, 'tickcolor': "darkblue"},

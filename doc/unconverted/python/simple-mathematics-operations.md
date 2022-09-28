@@ -158,7 +158,7 @@ import publisher
 publisher.publish(
     'python_Simple_Mathematics_Operations.ipynb', 'python/simple-mathematics-operations/', 'Simple Mathematics Operations | plotly',
     'Learn how to perform simple mathematical operations on dataframes such as scaling, adding, and subtracting',
-    title='Simple Mathematics Operations in Python. | plotly',
+    self='Simple Mathematics Operations in Python. | plotly',
     name='Simple Mathematics Operations',
     language='python',
     page_type='example_index', has_thumbnail='false', display_as='mathematics', order=1,

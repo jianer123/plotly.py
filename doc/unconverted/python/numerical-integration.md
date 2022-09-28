@@ -87,7 +87,7 @@ import publisher
 publisher.publish(
     'python_Numerical_Integration.ipynb', 'python/numerical-integration/', 'Numerical Integration | plotly',
     'Learn how to integrate a sequence or list of values numerically',
-    title='Numerical Integration in Python. | plotly',
+    self='Numerical Integration in Python. | plotly',
     name='Numerical Integration',
     language='python',
     page_type='example_index', has_thumbnail='false', display_as='mathematics', order=7,

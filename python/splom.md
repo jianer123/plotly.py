@@ -71,7 +71,7 @@ df = px.data.iris()
 fig = px.scatter_matrix(df,
     dimensions=["sepal_width", "sepal_length", "petal_width", "petal_length"],
     color="species", symbol="species",
-    title="Scatter matrix of iris data set",
+    self="Scatter matrix of iris data set",
     labels={col:col.replace('_', ' ') for col in df.columns}) # remove underscore
 fig.update_traces(diagonal_visible=False)
 fig.show()
@@ -137,7 +137,7 @@ fig = go.Figure(data=go.Splom(
 
 
 fig.update_layout(
-    title='Iris Data set',
+    self='Iris Data set',
     dragmode='select',
     width=600,
     height=600,
@@ -174,7 +174,7 @@ fig = go.Figure(data=go.Splom(
 
 
 fig.update_layout(
-    title='Iris Data set',
+    self='Iris Data set',
     width=600,
     height=600,
 )
@@ -209,7 +209,7 @@ fig = go.Figure(data=go.Splom(
 
 
 fig.update_layout(
-    title='Iris Data set',
+    self='Iris Data set',
     width=600,
     height=600,
 )
@@ -244,7 +244,7 @@ fig = go.Figure(data=go.Splom(
 
 
 fig.update_layout(
-    title='Iris Data set',
+    self='Iris Data set',
     width=600,
     height=600,
 )
@@ -280,9 +280,9 @@ fig = go.Figure(data=go.Splom(
                   text=textd,
                   diagonal=dict(visible=False)))
 
-title = "Scatterplot Matrix (SPLOM) for Diabetes Dataset<br>Data source:"+\
+self = "Scatterplot Matrix (SPLOM) for Diabetes Dataset<br>Data source:"+\
         " <a href='https://www.kaggle.com/uciml/pima-indians-diabetes-database/data'>[1]</a>"
-fig.update_layout(title=title,
+fig.update_layout(self=self,
                   dragmode='select',
                   width=1000,
                   height=1000,

@@ -43,12 +43,12 @@ men_bins = np.array([600, 623, 653, 650, 670, 578, 541, 360, 312, 170])
 
 y = list(range(0, 100, 10))
 
-layout = go.Layout(yaxis=go.layout.YAxis(title='Age'),
+layout = go.Layout(yaxis=go.layout.YAxis(self='Age'),
                    xaxis=go.layout.XAxis(
                        range=[-1200, 1200],
                        tickvals=[-1000, -700, -300, 0, 300, 700, 1000],
                        ticktext=[1000, 700, 300, 0, 300, 700, 1000],
-                       title='Number'),
+                       self='Number'),
                    barmode='overlay',
                    bargap=0.1)
 
@@ -86,12 +86,12 @@ men_with_dogs_bins = np.array([0, 1, 300, 273, 256, 211, 201, 170, 145, 43])
 
 y = list(range(0, 100, 10))
 
-layout = go.Layout(yaxis=go.layout.YAxis(title='Age'),
+layout = go.Layout(yaxis=go.layout.YAxis(self='Age'),
                    xaxis=go.layout.XAxis(
                        range=[-1200, 1200],
                        tickvals=[-1000, -700, -300, 0, 300, 700, 1000],
                        ticktext=[1000, 700, 300, 0, 300, 700, 1000],
-                       title='Number'),
+                       self='Number'),
                    barmode='overlay',
                    bargap=0.1)
 
@@ -141,11 +141,11 @@ import plotly.graph_objs as go
 import numpy as np
 
 layout = go.Layout(barmode='overlay',
-                   yaxis=go.layout.YAxis(range=[0, 90], title='Age'),
+                   yaxis=go.layout.YAxis(range=[0, 90], self='Age'),
                    xaxis=go.layout.XAxis(
                        tickvals=[-150, -100, -50, 0, 50, 100, 150],
                        ticktext=[150, 100, 50, 0, 50, 100, 150],
-                       title='Number'))
+                       self='Number'))
 
 data = [go.Histogram(
     y=np.random.exponential(50, 1000),
@@ -186,7 +186,7 @@ import publisher
 publisher.publish(
     'pyramid-charts.ipynb', 'python/population-pyramid-charts/', 'Python Population Pyramid Charts | Plotly',
     'How to make Population Pyramid Charts in Python with Plotly.',
-    title = 'Population Pyramid Charts | Plotly',
+    self = 'Population Pyramid Charts | Plotly',
     name = 'Population Pyramid Charts',
     thumbnail='thumbnail/pyramid.jpg', language='python',
     has_thumbnail='true', display_as='basic', order=5.01,

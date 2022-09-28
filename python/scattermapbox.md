@@ -193,7 +193,7 @@ fig.add_trace(go.Scattermapbox(
     ))
 
 fig.update_layout(
-    title='Nuclear Waste Sites on Campus',
+    self='Nuclear Waste Sites on Campus',
     autosize=True,
     hovermode='closest',
     showlegend=False,

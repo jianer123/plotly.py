@@ -106,7 +106,7 @@ trace5 = go.Scatter(
 )
 data = [trace1, trace2, trace3, trace4, trace5]
 layout = go.Layout(
-    title='Mic Patterns',
+    self='Mic Patterns',
     font=dict(
         family='Arial, sans-serif;',
         size=12,
@@ -211,7 +211,7 @@ trace6 = go.Scatter(
 )
 data = [trace1, trace2, trace3, trace4, trace5, trace6]
 layout = go.Layout(
-    title='Hobbs-Pearson Trials',
+    self='Hobbs-Pearson Trials',
     font=dict(
         size=15
     ),
@@ -264,7 +264,7 @@ trace4 = go.Area(
 )
 data = [trace1, trace2, trace3, trace4]
 layout = go.Layout(
-    title='Wind Speed Distribution in Laurel, NE',
+    self='Wind Speed Distribution in Laurel, NE',
     font=dict(
         size=16
     ),
@@ -297,7 +297,7 @@ import publisher
 publisher.publish(
     'polar.ipynb', 'python/legacy-polar-chart/', 'Polar Charts [Legacy]',
     'Legacy polar charts in python.',
-    title = 'Python Polar Charts | plotly',
+    self = 'Python Polar Charts | plotly',
     has_thumbnail='true', thumbnail='thumbnail/polar-scatter.jpg',
     language='python',
     display_as='legacy_charts', order=1,

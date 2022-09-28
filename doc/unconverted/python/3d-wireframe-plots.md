@@ -53,7 +53,7 @@ for i, j, k in zip(xGrid, yGrid, z):
     lines.append(go.Scatter3d(x=i, y=j, z=k, mode='lines', line=line_marker))
 
 layout = go.Layout(
-    title='Wireframe Plot',
+    self='Wireframe Plot',
     scene=dict(
         xaxis=dict(
             gridcolor='rgb(255, 255, 255)',
@@ -100,7 +100,7 @@ import publisher
 publisher.publish(
     '3d-wireframe.ipynb', 'python/3d-wireframe-plots/', 'Python Wireframe Plots | plotly',
     'How to make wireframe plots in Python',
-    title= '3D Wireframe Plots in Python | plotly',
+    self= '3D Wireframe Plots in Python | plotly',
     name = '3D Wireframe Plots',
     has_thumbnail='true', thumbnail='thumbnail/wireframe.jpg',
     language='python',

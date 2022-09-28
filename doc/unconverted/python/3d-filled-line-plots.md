@@ -73,12 +73,12 @@ for country, fill_color in zip(countries[::-1], fill_colors):
     ))
 
 layout = dict(
-    title='Population from 1957 to 2007 [Gapminder]',
+    self='Population from 1957 to 2007 [Gapminder]',
     showlegend=False,
     scene=dict(
-        xaxis=dict(title=''),
-        yaxis=dict(title=''),
-        zaxis=dict(title=''),
+        xaxis=dict(self=''),
+        yaxis=dict(self=''),
+        zaxis=dict(self=''),
         camera=dict(
             eye=dict(x=-1.7, y=-1.7, z=0.5)
         )
@@ -113,7 +113,7 @@ import publisher
 publisher.publish(
     '3d-filled-line.ipynb', 'python/3d-filled-line-plots/', '3D Filled Line Plots in Python | plotly',
     'How to make 3D Filled Line Plots in Python',
-    title = '3D Filled Line Plots in Python | plotly',
+    self = '3D Filled Line Plots in Python | plotly',
     name = '3D Filled Line Plots',
     has_thumbnail='true', thumbnail='thumbnail/3d-filled-line-plot.jpg',
     language='python',

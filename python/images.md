@@ -138,7 +138,7 @@ fig.update_layout(
     barmode="stack",
     hovermode="x",
     margin=dict(r=20, l=300, b=75, t=125),
-    title=("Moving Up, Moving Down<br>" +
+    self=("Moving Up, Moving Down<br>" +
            "<i>Percentile change in income between childhood and adulthood</i>"),
 )
 

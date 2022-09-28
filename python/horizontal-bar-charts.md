@@ -58,7 +58,7 @@ df = px.data.tips()
 fig = px.bar(df, x="total_bill", y="sex", color='day', orientation='h',
              hover_data=["tip", "size"],
              height=400,
-             title='Restaurant bills')
+             self='Restaurant bills')
 fig.show()
 ```
 
@@ -260,7 +260,7 @@ fig.append_trace(go.Scatter(
 ), 1, 2)
 
 fig.update_layout(
-    title='Household savings & net worth for eight OECD countries',
+    self='Household savings & net worth for eight OECD countries',
     yaxis=dict(
         showgrid=False,
         showline=False,

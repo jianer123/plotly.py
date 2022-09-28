@@ -83,7 +83,7 @@ fig = tools.make_subplots(rows=2, cols=1)
 fig.append_trace(trace1, 1, 1)
 fig.append_trace(trace2, 2, 1)
 
-fig['layout'].update(height=600, width=800, title='Normalize by a Constant')
+fig['layout'].update(height=600, width=800, self='Normalize by a Constant')
 py.iplot(fig, filename='apple-data-normalize-constant')
 ```
 
@@ -110,7 +110,7 @@ fig = tools.make_subplots(rows=2, cols=1)
 fig.append_trace(trace1, 1, 1)
 fig.append_trace(trace2, 2, 1)
 
-fig['layout'].update(height=600, width=800, title='Normalize to [0,1]')
+fig['layout'].update(height=600, width=800, self='Normalize to [0,1]')
 py.iplot(fig, filename='apple-data-normalize-0-1')
 ```
 
@@ -139,7 +139,7 @@ fig = tools.make_subplots(rows=2, cols=1)
 fig.append_trace(trace1, 1, 1)
 fig.append_trace(trace2, 2, 1)
 
-fig['layout'].update(height=600, width=800, title='Normalize to [10,50]')
+fig['layout'].update(height=600, width=800, self='Normalize to [10,50]')
 py.iplot(fig, filename='apple-data-normalize-a-b')
 ```
 
@@ -154,7 +154,7 @@ import publisher
 publisher.publish(
     'python_Normalization.ipynb', 'python/normalization/', 'Normalization | plotly',
     'Learn how to normalize data by fitting to intervals on the real line and dividing by a constant',
-    title='Normalization in Python. | plotly',
+    self='Normalization in Python. | plotly',
     name='Normalization',
     language='python',
     page_type='example_index', has_thumbnail='false', display_as='mathematics', order=2,

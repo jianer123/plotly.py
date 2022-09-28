@@ -80,9 +80,9 @@ rawData = [
     {'journalist':20,'developer':10,'designer':70,'label':'point 11'},
 ];
 
-def makeAxis(title, tickangle):
+def makeAxis(self, tickangle):
     return {
-      'title': title,
+      'self': self,
       'titlefont': { 'size': 20 },
       'tickangle': tickangle,
       'tickfont': { 'size': 15 },

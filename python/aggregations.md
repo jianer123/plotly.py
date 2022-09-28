@@ -117,9 +117,9 @@ data = [dict(
 )]
 
 layout = dict(
-  title = '<b>Plotly Aggregations</b><br>use dropdown to change aggregation',
-  xaxis = dict(title = 'Subject'),
-  yaxis = dict(title = 'Score', range = [0,22]),
+  self = '<b>Plotly Aggregations</b><br>use dropdown to change aggregation',
+  xaxis = dict(self = 'Subject'),
+  yaxis = dict(self = 'Score', range = [0,22]),
   updatemenus = [dict(
         x = 0.85,
         y = 1.15,
@@ -163,13 +163,13 @@ data = [dict(
 layout = dict(
   paper_bgcolor = 'rgb(240, 240, 240)',
   plot_bgcolor = 'rgb(240, 240, 240)',
-  title = '<b>Shooting Incidents</b>',
+  self = '<b>Shooting Incidents</b>',
   xaxis = dict(
-    title = '',
+    self = '',
     type = 'date'
   ),
   yaxis = dict(
-    title = 'Shootings Incidents',
+    self = 'Shootings Incidents',
     type = 'linear'
   ),
   updatemenus = [dict(
@@ -249,9 +249,9 @@ data = [dict(
 )]
 
 layout = dict(
-  title = '<b>Plotly Aggregations</b><br>use dropdown to change aggregation',
-  xaxis = dict(title = 'Subject'),
-  yaxis = dict(title = 'Score', range = [0,22]),
+  self = '<b>Plotly Aggregations</b><br>use dropdown to change aggregation',
+  xaxis = dict(self = 'Subject'),
+  yaxis = dict(self = 'Score', range = [0,22]),
   height = 600,
   width = 900,
   updatemenus = [dict(

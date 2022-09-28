@@ -245,7 +245,7 @@ import plotly.express as px
 import numpy as np
 
 fig = px.imshow(color, color_continuous_scale=colorscale, aspect="auto",
-               title='Periodic Table')
+               self='Periodic Table')
 fig.update_traces(
     text=symbol, texttemplate="%{text}", textfont_size=12,
     customdata=np.moveaxis([element, atomic_mass], 0,-1),

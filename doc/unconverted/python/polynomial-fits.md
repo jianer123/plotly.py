@@ -90,7 +90,7 @@ annotation = go.Annotation(
                   showarrow=False
                   )
 layout = go.Layout(
-                title='Polynomial Fit in Python',
+                self='Polynomial Fit in Python',
                 plot_bgcolor='rgb(229, 229, 229)',
                   xaxis=go.XAxis(zerolinecolor='rgb(255,255,255)', gridcolor='rgb(255,255,255)'),
                   yaxis=go.YAxis(zerolinecolor='rgb(255,255,255)', gridcolor='rgb(255,255,255)'),
@@ -114,7 +114,7 @@ import publisher
 publisher.publish(
     'Polynomial-fits.ipynb', 'python/polynomial-fits/', 'Polynomial Fit',
     'Create a polynomial fit / regression in Python and add a line of best fit to your chart.',
-    title = 'Polynomial Fit',
+    self = 'Polynomial Fit',
     name = 'Polynomial Fit',
     has_thumbnail='true', thumbnail='thumbnail/polynomial_fit.jpg',
     language='python', page_type='example_index',

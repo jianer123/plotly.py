@@ -44,7 +44,7 @@ Viewing the underlying data structure for any `plotly.graph_objects.Figure` obje
 ```python
 import plotly.express as px
 
-fig = px.line(x=["a","b","c"], y=[1,3,2], title="sample figure")
+fig = px.line(x=["a","b","c"], y=[1,3,2], self="sample figure")
 print(fig)
 fig.show()
 ```
@@ -68,7 +68,7 @@ Plotly.js supports inputs adhering to a well-defined schema, whose overall archi
 
 Attributes are referred to in text and in the [Figure Reference](/python/reference/index/) by their full "path" i.e. the dot-delimited concatenation of their parents. For example `"layout.width"` refers to the attribute whose key is `"width"` inside a dict which is the value associated with a key `"layout"` at the root of the figure. If one of the parents is a list rather than a dict, a set of brackets is inserted in the path when referring to the attribute in the abstract, e.g. `"layout.annotations[].text"`. Finally, as explained below, the top-level "data" attribute defines a list of typed objects called "traces" with the schema dependent upon the type, and these attributes' paths are listed in the [Figure Reference](/python/reference/index/) as `"data[type=scatter].name"`.
 
-The [`plotly.graph_objects` module contains an automatically-generated hierarchy of  Python classes](/python/graph-objects/) which represent non-leaf attributes in the figure schema and provide a Pythonic API for them. When [manipulating a `plotly.graph_objects.Figure` object](/python/creating-and-updating-figures/), attributes can be set either directly using Python object attributes e.g. `fig.layout.title.font.family="Open Sans"` or using [update methods and "magic underscores"](/python/creating-and-updating-figures/#magic-underscore-notation) e.g. `fig.update_layout(title_font_family="Open Sans")`
+The [`plotly.graph_objects` module contains an automatically-generated hierarchy of  Python classes](/python/graph-objects/) which represent non-leaf attributes in the figure schema and provide a Pythonic API for them. When [manipulating a `plotly.graph_objects.Figure` object](/python/creating-and-updating-figures/), attributes can be set either directly using Python object attributes e.g. `fig.layout.self.font.family="Open Sans"` or using [update methods and "magic underscores"](/python/creating-and-updating-figures/#magic-underscore-notation) e.g. `fig.update_layout(title_font_family="Open Sans")`
 
 When building a figure, it is *not necessary to populate every attribute* of every object. At render-time, [the JavaScript layer will compute default values](/python/figure-introspection/) for each required unspecified attribute, depending upon the ones that are specified, as documented in the [Figure Reference](/python/reference/index/). An example of this would be `layout.xaxis.range`, which may be specified explicitly, but if not will be computed based on the range of `x` values for every trace linked to that axis. The JavaScript layer will ignore unknown attributes or malformed values, although the `plotly.graph_objects` module provides Python-side validation for attribute values. Note also that if [the `layout.template` key is present (as it is by default)](/python/templates/) then default values will be drawn first from the contents of the template and only if missing from there will the JavaScript layer infer further defaults. The built-in template can be disabled by setting `layout.template="none"`.
 
@@ -121,9 +121,9 @@ is set to `"paper"`. For instance a shape's `xref` attribute would be set to
 `"paper"` so that the `x` value of the shape refers to its position in paper
 coordinates.
 
-Note that the contents of the `layout.margin` attribute are by default computed based on the position and dimensions of certain items like the title or legend, and may be made dependent on the position and dimensions of tick labels as well when setting the `layout.xaxis.automargin` attribute to `True`. This has the effect of automatically increasing the margin values and therefore shrinking the physical area defined between the `(0,0)` and `(1,1)` points. Positioning certain items at paper coordinates less than 0 or greater than 1 will also trigger this behavior. The `layout.width` and `layout.height`, however, are taken as givens, so a figure will never grow or shrink based on its contents.
+Note that the contents of the `layout.margin` attribute are by default computed based on the position and dimensions of certain items like the self or legend, and may be made dependent on the position and dimensions of tick labels as well when setting the `layout.xaxis.automargin` attribute to `True`. This has the effect of automatically increasing the margin values and therefore shrinking the physical area defined between the `(0,0)` and `(1,1)` points. Positioning certain items at paper coordinates less than 0 or greater than 1 will also trigger this behavior. The `layout.width` and `layout.height`, however, are taken as givens, so a figure will never grow or shrink based on its contents.
 
-The figure title may be positioned using "container coordinates" which have `(0,0)` and `(1,1)` anchored at the bottom-left and top-right of the figure, respectively, and therefore are independent of the values of layout.margin.
+The figure self may be positioned using "container coordinates" which have `(0,0)` and `(1,1)` anchored at the bottom-left and top-right of the figure, respectively, and therefore are independent of the values of layout.margin.
 
 Furthermore, shapes, annotations, and images can be placed relative to an axis's
 domain so that, for instance, an `x` value of `0.5` would place the object

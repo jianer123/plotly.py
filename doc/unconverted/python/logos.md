@@ -83,14 +83,14 @@ layout = go.Layout(
     barmode='stack', hovermode='x',
     margin=dict(r=20, l=300,
                   b=75, t=125),
-    title='Moving Up, Moving Down<br><i>Percentile change in income between childhood and adulthood</i>',
+    self='Moving Up, Moving Down<br><i>Percentile change in income between childhood and adulthood</i>',
     xaxis=dict(
         dtick=10, nticks=0,
         gridcolor='rgba(102, 102, 102, 0.4)',
         linecolor='#000', linewidth=1,
         mirror=True,
         showticklabels=True, tick0=0, tickwidth=1,
-        title='<i>Change in percentile</i>',
+        self='<i>Change in percentile</i>',
     ),
     yaxis=dict(
         anchor='x',
@@ -197,7 +197,7 @@ import publisher
 publisher.publish(
     'logos.ipynb', 'python/logos/', 'Add Logos to Charts',
     'How to add images as logos to Plotly charts.',
-    title = 'Add Logos to Charts | plotly',
+    self = 'Add Logos to Charts | plotly',
     name = 'Logos',
     has_thumbnail='false', thumbnail='thumbnail/your-tutorial-chart.jpg',
     language='python', page_type='example_index',

@@ -46,7 +46,7 @@ Traces which support [continuous color](/python/colorscales/) can also be associ
 
 [Plotly Express](/python/plotly-express/) is the easy-to-use, high-level interface to Plotly, which [operates on a variety of types of data](/python/px-arguments/) and produces [easy-to-style figures](/python/styling-plotly-express/).
 
-Plotly Express functions will create one [trace](/python/figure-structure) per animation frame for each unique combination of data values mapped to discrete color, symbol, line-dash, facet-row and/or facet-column. Traces' `legendgroup` and `showlegend` attributed are set such that only one legend item appears per unique combination of discrete color, symbol and/or line-dash. The legend title is automatically set, and can be overrided with the `labels` keyword argument:
+Plotly Express functions will create one [trace](/python/figure-structure) per animation frame for each unique combination of data values mapped to discrete color, symbol, line-dash, facet-row and/or facet-column. Traces' `legendgroup` and `showlegend` attributed are set such that only one legend item appears per unique combination of discrete color, symbol and/or line-dash. The legend self is automatically set, and can be overrided with the `labels` keyword argument:
 
 ```python
 import plotly.express as px
@@ -123,7 +123,7 @@ import plotly.express as px
 
 df = px.data.tips()
 fig = px.histogram(df, x="sex", y="total_bill", color="time",
-                  title="Total Bill by Sex, Colored by Time")
+                  self="Total Bill by Sex, Colored by Time")
 fig.update_layout(showlegend=False)
 fig.show()
 ```
@@ -391,7 +391,7 @@ fig.add_trace(go.Scatter(
     line=dict(color="MediumPurple")
 ))
 
-fig.update_layout(title="Try Clicking on the Legend Items!")
+fig.update_layout(self="Try Clicking on the Legend Items!")
 
 fig.show()
 ```
@@ -441,7 +441,7 @@ fig.add_trace(go.Scatter(
     showlegend=False
 ))
 
-fig.update_layout(title="Try Clicking on the Legend Items!")
+fig.update_layout(self="Try Clicking on the Legend Items!")
 fig.show()
 ```
 
@@ -494,7 +494,7 @@ fig.add_trace(go.Scatter(
     line=dict(color="MediumPurple")
 ))
 
-fig.update_layout(title="Try Clicking on the Legend Items!")
+fig.update_layout(self="Try Clicking on the Legend Items!")
 fig.update_layout(legend=dict(groupclick="toggleitem"))
 
 fig.show()

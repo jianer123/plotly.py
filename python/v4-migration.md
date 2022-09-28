@@ -171,7 +171,7 @@ from plotly.subplots import make_subplots
  .add_scatter(y=[2, 1, 3], row=1, col=1)
  .add_bar(y=[3, 2, 1], row=1, col=2)
  .update_layout(
-     title_text="Figure title",
+     title_text="Figure self",
      showlegend=False,
      width=800,
      height=500,
